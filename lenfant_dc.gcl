@@ -105,9 +105,7 @@ mark_lb Ws
 
 % Pennsylvania Av (between White House and Capitol)
 line AvPA2 Cw Ws
-set_equal a Ws
-set_equal b Cw
-drawsegment a b
+drawsegment Ws Cw
 
 
 
@@ -409,4 +407,49 @@ drawsegment AvMA_x_AvCT AvVT_x_StP
 line AvNH AvPA1_x_StK AvMA_x_AvCT
 towards AvNHf AvPA1_x_StK AvMA_x_AvCT f
 drawsegment AvPA1_x_StK AvNHf
+
+% Rhode Island Av
+intersection AvCT_x_StM AvCT StM
+line AvRI AvMA_x_St16 AvCT_x_StM
+towards AvRIf AvCT_x_StM AvMA_x_St16 f
+drawsegment AvCT_x_StM AvRIf
+
+% 13th St
+translate St13f t tn AvVT_x_StP
+line St13 AvVT_x_StP St13f
+drawline St13
+
+% 14th St
+translate St14f t tn AvMA_x_AvVT
+line St14 AvMA_x_AvVT St14f
+drawline St14
+
+% 19th St
+translate St19f t tn AvMA_x_AvCT
+line St19 AvMA_x_AvCT St19f
+drawline St19
+
+% 18th St (alternate)
+translate St18Af t tn AvCT_x_StM
+line St18A AvCT_x_StM St18Af
+drawsegment AvCT_x_StM St18Af
+
+% 15th St (lower part)
+intersection AvCT_x_StK AvCT StK
+translate St15Lf t ts AvCT_x_StK
+line St15L AvCT_x_StK St15Lf
+drawsegment AvCT_x_StK St15Lf
+
+% 17th St (lower part)
+symmetrical AvVT_x_StK St16 AvCT_x_StK
+symmetrical St17Lf St16 St15Lf
+line St17L AvVT_x_StK St17Lf
+drawsegment AvVT_x_StK St17Lf
+
+% H St (in front of White House, from 15th St to 19th St)
+intersection AvNY2_x_St13 AvNY2 St13
+intersection AvPA1_x_St19 AvPA1 St19
+line StH2 AvNY2_x_St13 AvPA1_x_St19
+drawsegment AvNY2_x_St13 AvPA1_x_St19
+
 
