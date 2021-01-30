@@ -1,0 +1,412 @@
+% Surveyor’s Layout Instructions for L’Enfant’s First Grand Plan of Washington, D.C.
+% Copyright © 2021, by Christopher A. Mosher, Shelton, Connecticut, USA.
+
+% Pierre Charles L’Enfant, dotted line map of Washington, D.C., 1791, before Aug. 19th, https://lccn.loc.gov/88694203 .
+
+% These constants are only used for proportionally adjusting the drawing to fit the display area. They
+% do not otherwise affect the geometry.
+number scal 0.006
+number offX 80
+number offY 30
+
+
+
+% L'Enfant first set the positions of the White House
+% and the Capitol building, with "vistas" down the
+% Potomac River.
+
+% Set Capitol upon Jenkin's Hill.
+% Use this is the origin of our two-dimensional
+% Cartesian coordinate system.
+expression C_x {0*scal+offX}
+expression C_y {0*scal+offY}
+
+% Set White House on Beall's Levels.
+% Position specified here as relative to the Capitol, in feet.
+expression W_x  {-7827*scal+offX}
+expression W_y  {2832*scal+offY}
+
+% The position of Alexadria, Virginia.
+% Alexandria was at the extreme southern point
+% of the new area of land set aside to be DC.
+% L'Enfant and George Washington both had hopes
+% of Alexandria being the main port city of the new nation.
+% Position specified here is, specifically, the new
+% (at the time) port area of the city, near present day
+% (2021) Strand and Prince Streets. For example,
+% Chadwicks Restaurant is in a building that was a
+% shipping warehouse at that time.
+% Delaware Avenue extending southwest from the west
+% entrance of the Capitol building aims directly
+% towards this point.
+expression A_x {-8817*scal+offX}
+expression A_y {-31708*scal+offY}
+
+% L'Enfant allowed for a reasonable width (about 160 feet)
+% for buildings, and aligned streets to the entrances on either
+% side of the White House and the Capitol building. This allowed
+% for "vistas" from the entrances, down the streets. Whereas
+% aligning streets to the centerpoints of the buildings would
+% not achieve this goal.
+expression b {160*scal}
+
+
+background 255 247 228
+fontsize 4
+
+
+% For streets that are drawn to arbitrary lengths
+% off into the margins of the map, we use a distance
+% here, for our plotting, that extends far enough past
+% other streets. 10 miles is more than enough.
+% "f" for "far"
+expression f {52800*scal}
+% used as directional vectors:
+expression negf {-f}
+point t 0 0
+point tn 0 f
+point ts 0 negf
+point te f 0
+point tw negf 0
+
+
+
+% magenta
+color 210 57 130
+
+% Capitol building (centerpoint)
+point C C_x C_y
+cmark_t C
+% western entrance
+expression Cw_x { C_x - b/2 }
+point Cw Cw_x C_y
+mark_lb Cw
+% eastern entrance
+expression Ce_x { C_x + b/2 }
+point Ce Ce_x C_y
+mark_rb Ce
+
+% White House (centerpoint)
+point W W_x W_y
+cmark_r W
+
+% northern entrance
+expression Wn_y { W_y + b/2 }
+point Wn W_x Wn_y
+mark_lt Wn
+% southern entrance
+expression Ws_y { W_y - b/2 }
+point Ws W_x Ws_y
+mark_lb Ws
+
+
+
+
+
+% Pennsylvania Av (between White House and Capitol)
+line AvPA2 Cw Ws
+set_equal a Ws
+set_equal b Cw
+drawsegment a b
+
+
+
+
+% green
+color 141 153 0
+
+% Jefferson Pier, due S of W, due W of C
+point J W_x C_y
+mark_lb J
+
+% Capitol Av, N/S and E/W through C
+translate Cns t tn C
+line CapitolNS C Cns
+drawline CapitolNS
+translate Cew t te C
+line CapitolEW C Cew
+drawline CapitolEW
+
+% F St
+translate Wew t te Ws
+line StF Ws Wew
+drawline StF
+
+% 16th St
+translate St16f t tn Wn
+line St16 Wn St16f
+drawsegment Wn St16f
+
+% calculate first angle of avenues (~70 degrees)
+angle_o Ap70 Ws Cw J
+angle_o An70 J Cw Ws
+
+% Indiana Av
+%symmetrical AvINp CapitolEW Ws
+%line AvIN J AvINp
+rotate RotAvIN J Ap70 Cw
+line AvIN1 J RotAvIN
+% We can't draw Indiana Av yet, because it's shown to end
+% at 4 1/2 St, but we haven't calcluated 4 1/2 St yet.
+
+
+% New York Av (SW of White House)
+symmetrical AvNY1p St16 Cw
+line AvNY1 Ws AvNY1p
+drawsegment Ws AvNY1p
+
+% C St
+intersection AvIN1_x_AvPA2 AvIN1 AvPA2
+translate AvIN1_x_AvPA2e t te AvIN1_x_AvPA2
+line StC AvIN1_x_AvPA2 AvIN1_x_AvPA2e
+drawline StC
+
+% 8th St
+mediatrice St8 J Cw
+drawline St8
+
+% Maryland Av (SW of Capitol)
+translate AvMD1a t tw Cw
+rotate RotAvMD1 Cw Ap70 AvMD1a
+line AvMD1 Cw RotAvMD1
+drawsegment Cw RotAvMD1
+
+% Virginia Av
+translate AvVAa t te J
+rotate RotAvVA J An70 AvVAa
+line AvVA J RotAvVA
+drawsegment J RotAvVA
+
+
+
+
+
+
+
+% cyan
+%color 32 162 153
+
+
+
+
+% yellow
+color 188 136 1
+% Alexandria, Virginia
+point A A_x A_y
+
+% Delaware Av SW
+line AvDE1 Cw A
+drawsegment Cw A
+
+% New Jersey Av SE
+symmetrical AvNJ2f CapitolNS A
+line AvNJ2 Ce AvNJ2f
+drawsegment Ce AvNJ2f
+
+
+
+
+
+
+%blue
+color 0 141 210
+
+% Calculate the "diamond" shaped avenues just east of
+% the Capitol. Its N/S distance is equal to twice the N/S distance
+% on 8th St from Capitol Av to Pennsylvania Av; and its E/W
+% distance is twice its N/S distance.
+% On the original digitized map, these measurements are
+% accurate to within 1 one pixel of each other.
+intersection CapitiolEW_x_St8 CapitolEW St8
+distance h CapitiolEW_x_St8 AvIN1_x_AvPA2
+expression h {Ce_x + 4*h}
+point L h C_y
+mark_rb L
+
+% 5th St E
+mediatrice St5E Ce L
+drawline St5E
+
+% 12th St E
+parallel St12E L St5E
+drawline St12E
+
+intersection T St5E StC
+mark_rt T
+
+% Massachusetts Av
+line AvMA T L
+drawline AvMA
+
+% N St
+intersection AvMA_x_St16 AvMA St16
+translate StNf t te AvMA_x_St16
+line StN AvMA_x_St16 StNf
+drawline StN
+
+% K St
+intersection AvMA_x_St8 AvMA St8
+translate StKf t te AvMA_x_St8
+line StK AvMA_x_St8 StKf
+drawline StK
+
+
+
+
+
+
+
+
+
+
+% yellow
+color 188 136 1
+
+% New Jersey Av NW
+symmetrical AvNJ1f CapitolEW A
+line AvNJ1 Cw AvNJ1f
+intersection AvNJ1f AvNJ1 StK
+drawsegment Cw AvNJ1f
+
+% Delaware Av NE
+symmetrical AvDE2f CapitolNS AvNJ1f
+line AvDE2 Ce AvDE2f
+drawsegment Ce AvDE2f
+
+
+% 1st St W
+intersection AvMa_x_AvNJ1 AvMA AvNJ1
+translate St1Wf t tn AvMa_x_AvNJ1
+line St1W AvMa_x_AvNJ1 St1Wf
+intersection St1Wf St1W AvDE1
+drawsegment AvMa_x_AvNJ1 St1Wf
+
+% 1st St E
+intersection AvMa_x_AvDE2 AvMA AvDE2
+translate St1Ef t tn AvMa_x_AvDE2
+line St1E AvMa_x_AvDE2 St1Ef
+intersection St1Ef St1E AvNJ2
+drawsegment AvMa_x_AvDE2 St1Ef
+
+% E St
+translate StEf t te AvMa_x_AvDE2
+line StE AvMa_x_AvDE2 StEf
+drawline StE
+
+
+
+% 4 1/2 St
+% This computation is still open for debate, but it appears
+% to be halfway between 8th St W and 1st St W
+intersection CapitolEW_x_St8 CapitolEW St8
+intersection CapitolEW_x_St1W CapitolEW St1W
+mediatrice St4_1_2 CapitolEW_x_St8 CapitolEW_x_St1W
+drawline St4_1_2
+
+
+
+
+
+% green
+color 141 153 0
+% continue with Indiana Av
+intersection AvIN1_x_St4_1_2 AvIN1 St4_1_2
+drawsegment J AvIN1_x_St4_1_2
+symmetrical AvIN2f St4_1_2 J
+line AvIN2 AvIN1_x_St4_1_2 AvIN2f
+intersection AvIN2f AvIN2 AvNJ1
+drawsegment AvIN1_x_St4_1_2 AvIN2f
+
+
+
+
+
+
+
+% yellow
+color 188 136 1
+
+% D St
+translate StDf t te AvIN1_x_St4_1_2
+line StD AvIN1_x_St4_1_2 StDf
+drawline StD
+
+
+
+
+
+%blue
+color 0 141 210
+
+% New York Av (NE of White House)
+line AvNY2 Wn AvMA_x_St8
+towards AvNY2f Wn AvMA_x_St8 f
+drawsegment Wn AvNY2f
+
+% Pennsylvania Av (W of White House)
+symmetrical AvPA1f St16 AvNY2f
+line AvPA1 Wn AvPA1f
+drawsegment Wn AvPA1f
+
+% 23rd St
+intersection AvPA1_x_StK AvPA1 StK
+translate St23f t tn AvPA1_x_StK
+line St23 AvPA1_x_StK St23f
+drawline St23
+
+% Maryland Av (NE of Capitol)
+line AvMD2 Ce T
+towards AvMDf Ce T f
+drawsegment Ce AvMDf
+
+% Pennsylvania Av (E of Capitol)
+sim S CapitolEW T
+mark_rb S
+line AvPA3 Ce S
+towards AvPA3f Ce S f
+drawsegment Ce AvPA3f
+
+% North Carolina Av
+line AvNC S L
+drawsegment S L
+
+
+
+
+
+
+
+% orange
+color 208 76 21
+
+% Vermont Av
+% This is within one degree of being perpendicular with Massachusetts Ave
+% at their point of intersection. Vermont is even closer to being
+% perpendicular to other segemnts of Massachuasetts Av (e.g., east of 4 1/2 St).
+perp AvVT Wn AvMA
+intersection AvMA_x_AvVT AvMA AvVT
+towards AvVTf Wn AvMA_x_AvVT f
+drawsegment Wn AvVTf
+
+% M St
+translate StMf t te AvMA_x_AvVT
+line StM AvMA_x_AvVT StMf
+drawline StM
+
+% Connecticut Av
+symmetrical AvCTf St16 AvMA_x_AvVT
+line AvCT Wn AvCTf
+intersection AvMA_x_AvCT AvMA AvCT
+drawsegment Wn AvMA_x_AvCT
+
+% P St
+translate StPf t te AvMA_x_AvCT
+line StP AvMA_x_AvCT StPf
+intersection AvVT_x_StP AvVT StP
+drawsegment AvMA_x_AvCT AvVT_x_StP
+
+% New Hampshire Av
+line AvNH AvPA1_x_StK AvMA_x_AvCT
+towards AvNHf AvPA1_x_StK AvMA_x_AvCT f
+drawsegment AvPA1_x_StK AvNHf
+
