@@ -231,7 +231,7 @@ mark_rt T
 line AvMA2 T L
 intersection CapitolNS_x_AvMA CapitolNS AvMA2
 drawsegment L CapitolNS_x_AvMA
-rotate AvMAp CapitolNS_x_AvMA 2 T
+rotate AvMAp CapitolNS_x_AvMA 1.8 T
 line AvMA AvMAp CapitolNS_x_AvMA
 towards AvMAf AvMAp CapitolNS_x_AvMA f
 drawsegment CapitolNS_x_AvMA AvMAf
@@ -293,6 +293,12 @@ drawsegment AvMa_x_AvDE2 St1Ef
 translate StEf t te AvMa_x_AvDE2
 line StE AvMa_x_AvDE2 StEf
 drawline StE
+
+% G St (E of Massachusetts Av)
+intersection AvMA_x_AvNJ1 AvMA AvNJ1
+translate StG2f t te AvMA_x_AvNJ1
+line StG2 AvMA_x_AvNJ1 StG2f
+drawsegment AvMA_x_AvNJ1 StG2f
 
 
 
@@ -564,4 +570,47 @@ line StLU St5_x_AvNY2 St5f
 intersection StLU_x_St4 StLU St4
 intersection StLU_x_St11 StLU St11
 drawsegment StLU_x_St4 StLU_x_St11
+
+% use the park width N & S of K St to calculate
+% positions of 7th St and 9th St
+expression halfb {b/2}
+expression neghalfb {-b/2}
+point halfbn 0 halfb
+point halfbs 0 neghalfb
+translate V2p t halfbn V
+translate V2f t te V2p
+line V2 V2p V2f
+
+% 9th St
+intersection St9_x_AvMA V2 AvMA
+translate St9f t tn St9_x_AvMA
+line St9 St9_x_AvMA St9f
+drawline St9
+
+% 7th St
+intersection St7_x_AvNY2 V2 AvNY2
+translate St7f t tn St7_x_AvNY2
+line St7 St7_x_AvNY2 St7f
+drawline St7
+intersection St7_x_AvMA St7 AvMA
+fillrectangle St7_x_AvMA St9_x_AvMA
+
+% L St (W of Massashusetts Av, and E of 4 1/2 st)
+intersection AvNY2_x_St4_1_2 AvNY2 St4_1_2
+translate StL1p t bs AvNY2_x_St4_1_2
+translate StL1fe t te StL1p
+translate StL1fw t tw StL1p
+line StL1 StL1p StL1fe
+intersection StL1_x_AvMA StL1 AvMA
+intersection StL1_x_AvNY2 StL1 AvNY2
+drawsegment StL1_x_AvMA StL1fw
+drawsegment StL1_x_AvNY2 StL1fe
+
+% H St (W of Pennsylvania Av)
+translate StH1p t bs AvPA1_x_St19
+translate StH1f t tw StH1p
+line StH1 StH1p StH1f
+intersection StH1_x_AvPA1 StH1 AvPA1
+drawsegment StH1_x_AvPA1 StH1f
+fillrectangle AvPA1_x_St19 StH1_x_AvPA1
 
