@@ -26,21 +26,13 @@ expression C_y {0*scal+offY}
 expression W_x  {-7827*scal+offX}
 expression W_y  {2832*scal+offY}
 
-% The position of Alexadria, Virginia.
-% Alexandria was at the extreme southern point
+% DC's southern boundary point.
+% Alexandria, Virginia was at the extreme southern point
 % of the new area of land set aside to be DC.
 % L'Enfant and George Washington both had hopes
 % of Alexandria being the main port city of the new nation.
-% Position specified here is, specifically, the new
-% (at the time) port area of the city, near present day
-% (2021) Strand and Prince Streets. For example,
-% Chadwicks Restaurant is in a building that was a
-% shipping warehouse at that time.
-% Delaware Avenue extending southwest from the west
-% entrance of the Capitol building aims directly
-% towards this point.
-expression A_x {-8817*scal+offX}
-expression A_y {-31708*scal+offY}
+expression A_x {-8984*scal+offX}
+expression A_y {-36228*scal+offY}
 
 % L'Enfant allowed for a reasonable width (about 160 feet)
 % for buildings, and aligned streets to the entrances on either
@@ -49,7 +41,7 @@ expression A_y {-31708*scal+offY}
 % aligning streets to the centerpoints of the buildings would
 % not achieve this goal.
 expression b {160*scal}
-
+expression bneg {-b}
 
 background 255 247 228
 fontsize 4
@@ -181,8 +173,6 @@ drawsegment J RotAvVA
 
 
 
-% cyan
-%color 32 162 153
 
 
 
@@ -233,8 +223,18 @@ intersection T St5E StC
 mark_rt T
 
 % Massachusetts Av
-line AvMA T L
-drawline AvMA
+% Heading NW from L, Massachusetts Av appears mostly straight,
+% but is actually crooked by about 2°. Placing a straightedge on the
+% original dotted-line map reveals this. Perhaps L'Enfant was following
+% the natural elevations of the land, or was adjusting the course to run
+% through previously placed "parks" for example at V, Mount Vernon Square.
+line AvMA2 T L
+intersection CapitolNS_x_AvMA CapitolNS AvMA2
+drawsegment L CapitolNS_x_AvMA
+rotate AvMAp CapitolNS_x_AvMA 2 T
+line AvMA AvMAp CapitolNS_x_AvMA
+towards AvMAf AvMAp CapitolNS_x_AvMA f
+drawsegment CapitolNS_x_AvMA AvMAf
 
 % N St
 intersection AvMA_x_St16 AvMA St16
@@ -243,11 +243,14 @@ line StN AvMA_x_St16 StNf
 drawline StN
 
 % K St
-intersection AvMA_x_St8 AvMA St8
-translate StKf t te AvMA_x_St8
-line StK AvMA_x_St8 StKf
+intersection V AvMA St8
+translate StKf t te V
+line StK V StKf
 drawline StK
 
+% This point, upon which L'Enfant placed a "park", seems highly significant.
+% This became Mount Vernon Square.
+mark_rt V
 
 
 
@@ -293,6 +296,8 @@ drawline StE
 
 
 
+
+
 % 4 1/2 St
 % This computation is still open for debate, but it appears
 % to be halfway between 8th St W and 1st St W
@@ -307,6 +312,17 @@ drawline St4_1_2
 
 % green
 color 141 153 0
+% G St
+% Distance from White House front entrance to
+% G St is approximately the same distance allowed for
+% the buildings' depth
+translate StGp Ws Wn Wn
+translate StGf t tw StGp
+line StG StGp StGf
+intersection StGp StG AvNJ1
+drawsegment StGp StGf
+
+
 % continue with Indiana Av
 intersection AvIN1_x_St4_1_2 AvIN1 St4_1_2
 drawsegment J AvIN1_x_St4_1_2
@@ -337,8 +353,8 @@ drawline StD
 color 0 141 210
 
 % New York Av (NE of White House)
-line AvNY2 Wn AvMA_x_St8
-towards AvNY2f Wn AvMA_x_St8 f
+line AvNY2 Wn V
+towards AvNY2f Wn V f
 drawsegment Wn AvNY2f
 
 % Pennsylvania Av (W of White House)
@@ -452,4 +468,100 @@ intersection AvPA1_x_St19 AvPA1 St19
 line StH2 AvNY2_x_St13 AvPA1_x_St19
 drawsegment AvNY2_x_St13 AvPA1_x_St19
 
+
+
+
+
+
+
+
+% cyan
+color 32 162 153
+
+% This next set of streets seems to be determined by first
+% setting a standard width for the areas dedicated to "parks"
+expression d {200*scal}
+expression dneg {-d}
+point bn 0 d
+point bs 0 dneg
+point be d 0
+point bw dneg 0
+
+expression d2 {160*scal}
+expression d2neg {-d2}
+point b2n 0 d2
+point b2s 0 d2neg
+point b2e d2 0
+point b2w d2neg 0
+
+% 17th St (upper part, N of CT Av)
+translate St17U_x_StK t be AvCT_x_StK
+translate St17Uf t tn St17U_x_StK
+line St17U St17U_x_StK St17Uf
+intersection AvCT_x_St17U AvCT St17U
+drawsegment AvCT_x_St17U St17Uf
+fillrectangle AvCT_x_St17U AvCT_x_StK
+
+% 15th St (upper part, N of VT Av)
+translate St15U_x_StK t bw AvVT_x_StK
+translate St15Uf t tn St15U_x_StK
+line St15U St15U_x_StK St15Uf
+intersection AvVT_x_St15U AvVT St15U
+drawsegment AvVT_x_St15U St15Uf
+fillrectangle AvVT_x_St15U AvVT_x_StK
+
+% I St (between NY Av and MA Av)
+line StIU AvCT_x_St17U AvVT_x_St15U
+intersection StIU_x_AvPA1 StIU AvPA1
+intersection StIU_x_AvNY2 StIU AvNY2
+drawsegment StIU_x_AvPA1 StIU_x_AvNY2
+
+% H St (between NY Av and MA Av)
+intersection St13_x_StH2 St13 StH2
+translate St13_x_StH3 t b2s St13_x_StH2
+translate StH3f t te St13_x_StH3
+line StH3 St13_x_StH3 StH3f
+intersection StH3_x_AvNY2 StH3 AvNY2
+intersection StH3_x_AvMA StH3 AvMA
+drawsegment StH3_x_AvNY2 StH3_x_AvMA
+fillrectangle StH3_x_AvNY2 St13_x_StH2
+
+% 3rd St
+translate St3f t tn StH3_x_AvMA
+line St3 StH3_x_AvMA St3f
+drawline St3
+
+% I St (E of NY Av)
+translate StILp t b2s StIU_x_AvNY2
+translate StILf t te StIU_x_AvNY2
+line StIL StILp StILf
+intersection StIL_x_AvNY2 StIL AvNY2
+intersection StIL_x_AvMA StIL AvMA
+drawsegment StIL_x_AvNY2 StIL_x_AvMA
+fillrectangle StIL_x_AvNY2 StIU_x_AvNY2
+
+% 5th St
+translate St5f t tn StIL_x_AvMA
+line St5 StIL_x_AvMA St5f
+drawline St5
+
+% 4th St
+symmetrical St4p St4_1_2 StIL_x_AvMA
+translate St4f t tn St4p
+line St4 St4p St4f
+drawline St4
+
+% 11th St
+towards St11p StIL_x_AvNY2 StIU_x_AvNY2 0.5
+translate St11f t tn St11p
+line St11 St11p St11f
+drawline St11
+
+% L St (between 4 1/2 St and 11 St)
+intersection St5_x_AvNY2 St5 AvNY2
+translate St5f t te St5_x_AvNY2
+line StLU St5_x_AvNY2 St5f
+intersection StLU_x_St4 StLU St4
+intersection StLU_x_St11 StLU St11
+drawsegment StLU_x_St4 StLU_x_St11
 
