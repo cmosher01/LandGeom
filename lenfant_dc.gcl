@@ -516,11 +516,16 @@ intersection AvVT_x_St15U AvVT St15U
 drawsegment AvVT_x_St15U St15Uf
 fillrectangle AvVT_x_St15U AvVT_x_StK
 
-% I St (between NY Av and MA Av)
+% I St (between NY Av and PA Av)
 line StIU AvCT_x_St17U AvVT_x_St15U
 intersection StIU_x_AvPA1 StIU AvPA1
 intersection StIU_x_AvNY2 StIU AvNY2
 drawsegment StIU_x_AvPA1 StIU_x_AvNY2
+
+% 21st St
+translate St21f t tn StIU_x_AvPA1
+line St21 StIU_x_AvPA1 St21f
+drawline St21
 
 % H St (between NY Av and MA Av)
 intersection St13_x_StH2 St13 StH2
@@ -613,4 +618,115 @@ line StH1 StH1p StH1f
 intersection StH1_x_AvPA1 StH1 AvPA1
 drawsegment StH1_x_AvPA1 StH1f
 fillrectangle AvPA1_x_St19 StH1_x_AvPA1
+
+% 18th St
+translate St18f t tn StH1_x_AvPA1
+line St18 StH1_x_AvPA1 St18f
+drawline St18
+
+
+
+
+
+
+% Street Labels
+
+
+color 99 123 131
+
+
+
+% Label E/W (letter) streets
+point tlab 10 0
+translate Lewp t tlab L
+translate Lewf t tn Lewp
+line Lew Lewp Lewf
+
+intersection lab Lew CapitolEW
+printat lab {Capitol}
+intersection lab Lew StC
+printat lab {C}
+intersection lab Lew StD
+printat lab {D}
+intersection lab Lew StE
+printat lab {E}
+intersection lab Lew StF
+printat lab {F}
+intersection lab Lew StG2
+printat lab {G}
+intersection lab Lew StH3
+printat lab {H}
+intersection lab Lew StIL
+printat lab {I}
+intersection lab Lew StK
+printat lab {K}
+intersection lab Lew StL1
+printat lab {L}
+intersection lab Lew StM
+printat lab {M}
+intersection lab Lew StN
+printat lab {N}
+intersection lab Lew StP
+printat lab {P}
+
+
+
+% Label N/S (number) streets
+point tlab 0 10
+translate Lnsp t tlab AvMA_x_AvCT
+translate Lnsf t te Lnsp
+line Lns Lnsp Lnsf
+
+intersection lab Lns St12E
+printat lab {12E}
+intersection lab Lns St5E
+printat lab {5E}
+intersection lab Lns St1E
+printat lab {1E}
+intersection lab Lns CapitolNS
+printat lab {Capitol}
+intersection lab Lns St1W
+printat lab {1}
+%intersection lab Lns St2
+%printat lab {2}
+intersection lab Lns St3
+printat lab {3}
+intersection lab Lns St4
+printat lab {4}
+intersection lab Lns St4_1_2
+printat lab {4h}
+intersection lab Lns St5
+printat lab {5}
+%intersection lab Lns St6
+%printat lab {6}
+intersection lab Lns St7
+printat lab {7}
+intersection lab Lns St8
+printat lab {8}
+intersection lab Lns St9
+printat lab {9}
+%intersection lab Lns St10
+%printat lab {10}
+intersection lab Lns St11
+printat lab {11}
+intersection lab Lns St13
+printat lab {13}
+intersection lab Lns St14
+printat lab {14}
+intersection lab Lns St15U
+printat lab {15}
+intersection lab Lns St16
+printat lab {16}
+intersection lab Lns St17U
+printat lab {17}
+intersection lab Lns St18
+printat lab {18}
+intersection lab Lns St19
+printat lab {19}
+intersection lab Lns St21
+printat lab {21}
+intersection lab Lns St23
+printat lab {23}
+%intersection lab Lns St24
+%printat lab {24}
 
