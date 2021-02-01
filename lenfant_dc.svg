@@ -130,7 +130,7 @@
 <!-- Drawing segment J AvIN1_x_St4_1_2 -->
 <line x1="66.08" y1="110.00" x2="131.09" y2="86.90" style="stroke:#8D9900; stroke-width:0.16"/>
 
-<!-- Drawing segment AvIN1_x_St4_1_2 AvIN2f -->
+<!-- Drawing segment AvIN1_x_St4_1_2 AvIN2_x_AvNJ1 -->
 <line x1="131.09" y1="86.90" x2="155.49" y2="95.57" style="stroke:#8D9900; stroke-width:0.16"/>
 
 <!-- Changing color 188 136 1 -->
@@ -250,13 +250,22 @@
 <line x1="134.37" y1="47.90" x2="98.53" y2="47.90" style="stroke:#20A299; stroke-width:0.16"/>
 
 <!-- Drawing line St9 -->
-<line x1="110.48" y1="150.00" x2="110.48" y2="0.00" style="stroke:#20A299; stroke-width:0.16"/>
+<line x1="109.96" y1="150.00" x2="109.96" y2="0.00" style="stroke:#20A299; stroke-width:0.16"/>
 
 <!-- Drawing line St7 -->
-<line x1="114.74" y1="150.00" x2="114.74" y2="0.00" style="stroke:#20A299; stroke-width:0.16"/>
+<line x1="115.29" y1="150.00" x2="115.29" y2="0.00" style="stroke:#20A299; stroke-width:0.16"/>
 
-<!-- Filling rectangle left-bottom: St7_x_AvMA right-top: St9_x_AvMA -->
-<path d="M114.74,55.62 L 110.48,55.62 L 110.48,53.65 L 114.74,53.65 z" fill="#20A299" stroke="none"/>
+<!-- Drawing line St10 -->
+<line x1="104.25" y1="150.00" x2="104.25" y2="0.00" style="stroke:#20A299; stroke-width:0.16"/>
+
+<!-- Drawing line St2 -->
+<line x1="143.34" y1="150.00" x2="143.34" y2="0.00" style="stroke:#20A299; stroke-width:0.16"/>
+
+<!-- Drawing line St6 -->
+<line x1="122.45" y1="150.00" x2="122.45" y2="0.00" style="stroke:#20A299; stroke-width:0.16"/>
+
+<!-- Drawing line St24 -->
+<line x1="16.37" y1="150.00" x2="16.37" y2="0.00" style="stroke:#20A299; stroke-width:0.16"/>
 
 <!-- Drawing segment StL1_x_AvMA StL1fw -->
 <line x1="0.00" y1="48.86" x2="100.09" y2="48.86" style="stroke:#20A299; stroke-width:0.16"/>
@@ -264,14 +273,38 @@
 <!-- Drawing segment StL1_x_AvNY2 StL1fe -->
 <line x1="125.64" y1="48.86" x2="260.00" y2="48.86" style="stroke:#20A299; stroke-width:0.16"/>
 
-<!-- Drawing segment StH1_x_AvPA1 StH1f -->
-<line x1="0.00" y1="66.66" x2="46.98" y2="66.66" style="stroke:#20A299; stroke-width:0.16"/>
-
-<!-- Filling rectangle left-bottom: AvPA1_x_St19 right-top: StH1_x_AvPA1 -->
-<path d="M41.53,64.26 L 46.98,64.26 L 46.98,66.66 L 41.53,66.66 z" fill="#20A299" stroke="none"/>
-
 <!-- Drawing line St18 -->
-<line x1="46.98" y1="150.00" x2="46.98" y2="0.00" style="stroke:#20A299; stroke-width:0.16"/>
+<line x1="48.45" y1="150.00" x2="48.45" y2="0.00" style="stroke:#20A299; stroke-width:0.16"/>
+
+<!-- Drawing segment AvPA1_x_St18 StH1f -->
+<line x1="0.00" y1="67.30" x2="48.45" y2="67.30" style="stroke:#20A299; stroke-width:0.16"/>
+
+<!-- Filling rectangle left-bottom: AvCT_x_StN right-top: AvCT_x_StM -->
+<path d="M46.75,33.17 L 50.14,33.17 L 50.14,40.52 L 46.75,40.52 z" fill="#20A299" stroke="none"/>
+
+<!-- Filling rectangle left-bottom: AvPA1_x_St19 right-top: AvPA1_x_St18 -->
+<path d="M41.53,64.26 L 48.45,64.26 L 48.45,67.30 L 41.53,67.30 z" fill="#20A299" stroke="none"/>
+
+<!-- Filling rectangle left-bottom: St7_x_AvMA right-top: St9_x_AvMA -->
+<path d="M115.29,55.87 L 109.96,55.87 L 109.96,53.41 L 115.29,53.41 z" fill="#20A299" stroke="none"/>
+
+<!-- Filling rectangle left-bottom: St7_x_StF right-top: St9_x_StG -->
+<path d="M115.29,76.98 L 109.96,76.98 L 109.96,73.14 L 115.29,73.14 z" fill="#20A299" stroke="none"/>
+
+<!-- Filling rectangle left-bottom: St7_x_Capitol right-top: St9_x_AvPA2 -->
+<path d="M115.29,110.00 L 109.96,110.00 L 109.96,92.56 L 115.29,92.56 z" fill="#20A299" stroke="none"/>
+
+<!-- Filling rectangle left-bottom: StL1_x_AvNY2 right-top: AvNY2_x_St4_1_2 -->
+<path d="M125.64,48.86 L 131.09,48.86 L 131.09,46.46 L 125.64,46.46 z" fill="#20A299" stroke="none"/>
+
+<!-- Filling rectangle left-bottom: StH3_x_St5 right-top: StD_x_St4 -->
+<path d="M127.82,66.18 L 134.37,66.18 L 134.37,86.90 L 127.82,86.90 z" fill="#20A299" stroke="none"/>
+
+<!-- Filling rectangle left-bottom: AvIN2_x_AvNJ1 right-top: AvIN2_x_St1W -->
+<path d="M155.49,95.57 L 149.63,95.57 L 149.63,93.49 L 155.49,93.49 z" fill="#20A299" stroke="none"/>
+
+<!-- Filling circle CirT -->
+<circle cx="82.01" cy="40.52" r="1.92" fill="#20A299" stroke="none"/>
 
 <!-- Changing color 99 123 131 -->
 
@@ -330,6 +363,9 @@
 <text x="149.63" y="11.84" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">1</text>
 
 <!-- Printing text at point lab -->
+<text x="143.34" y="11.84" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">2</text>
+
+<!-- Printing text at point lab -->
 <text x="137.63" y="11.84" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">3</text>
 
 <!-- Printing text at point lab -->
@@ -342,13 +378,19 @@
 <text x="127.82" y="11.84" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">5</text>
 
 <!-- Printing text at point lab -->
-<text x="114.74" y="11.84" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">7</text>
+<text x="122.45" y="11.84" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">6</text>
+
+<!-- Printing text at point lab -->
+<text x="115.29" y="11.84" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">7</text>
 
 <!-- Printing text at point lab -->
 <text x="112.56" y="11.84" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">8</text>
 
 <!-- Printing text at point lab -->
-<text x="110.48" y="11.84" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">9</text>
+<text x="109.96" y="11.84" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">9</text>
+
+<!-- Printing text at point lab -->
+<text x="104.25" y="11.84" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">10</text>
 
 <!-- Printing text at point lab -->
 <text x="98.53" y="11.84" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">11</text>
@@ -369,7 +411,7 @@
 <text x="59.04" y="11.84" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">17</text>
 
 <!-- Printing text at point lab -->
-<text x="46.98" y="11.84" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">18</text>
+<text x="48.45" y="11.84" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">18</text>
 
 <!-- Printing text at point lab -->
 <text x="41.53" y="11.84" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">19</text>
@@ -379,4 +421,7 @@
 
 <!-- Printing text at point lab -->
 <text x="19.59" y="11.84" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">23</text>
+
+<!-- Printing text at point lab -->
+<text x="16.37" y="11.84" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">24</text>
 </svg>

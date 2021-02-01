@@ -336,8 +336,8 @@ intersection AvIN1_x_St4_1_2 AvIN1 St4_1_2
 drawsegment J AvIN1_x_St4_1_2
 symmetrical AvIN2f St4_1_2 J
 line AvIN2 AvIN1_x_St4_1_2 AvIN2f
-intersection AvIN2f AvIN2 AvNJ1
-drawsegment AvIN1_x_St4_1_2 AvIN2f
+intersection AvIN2_x_AvNJ1 AvIN2 AvNJ1
+drawsegment AvIN1_x_St4_1_2 AvIN2_x_AvNJ1
 
 
 
@@ -580,8 +580,8 @@ drawsegment StLU_x_St4 StLU_x_St11
 
 % use the park width N & S of K St to calculate
 % positions of 7th St and 9th St
-expression halfb {b/2}
-expression neghalfb {-b/2}
+expression halfb {d/2}
+expression neghalfb {-d/2}
 point halfbn 0 halfb
 point halfbs 0 neghalfb
 translate V2p t halfbn V
@@ -599,8 +599,43 @@ intersection St7_x_AvNY2 V2 AvNY2
 translate St7f t tn St7_x_AvNY2
 line St7 St7_x_AvNY2 St7f
 drawline St7
-intersection St7_x_AvMA St7 AvMA
-fillrectangle St7_x_AvMA St9_x_AvMA
+
+% 10th St (half way between 9th and 11th)
+intersection St9_x_StM St9 StM
+intersection St11_x_StM St11 StM
+mediatrice St10 St9_x_StM  St11_x_StM
+drawline St10
+
+% 2nd St (same distance from 3rd St as 10th St is from 11th st)
+intersection St10_x_StM St10 StM
+intersection St3_x_StM St3 StM
+translate St2p St11_x_StM St10_x_StM St3_x_StM
+translate St2f t tn St2p
+line St2 St2p St2f
+drawline St2
+
+% 6th St (Seems almost arbitrarily placed, since it doesn't
+% intersect with any other intersections. But it is nearly 3/7ths
+% the distance from 5th St to 7th St. That is, the distance from
+% 5th to 6th is 3/4 the distance from 6th to 7th.)
+expression St6d {3/7}
+intersection St5_x_StM St5 StM
+intersection St7_x_StM St7 StM
+towards St6p St5_x_StM St7_x_StM St6d
+translate St6f t tn St6p
+line St6 St6p St6f
+drawline St6
+
+% 24th St (Seems very arbitrarily placed. The distance from
+% 24th St to 23rd St is 3/8 the distance from 21st St to 23rd St.
+expression St24d {1+3/11}
+intersection St21_x_StM St21 StM
+intersection St23_x_StM St23 StM
+towards St24p St21_x_StM St23_x_StM St24d
+translate St24f t tn St24p
+line St24 St24p St24f
+drawline St24
+
 
 % L St (W of Massashusetts Av, and E of 4 1/2 st)
 intersection AvNY2_x_St4_1_2 AvNY2 St4_1_2
@@ -613,21 +648,46 @@ intersection StL1_x_AvNY2 StL1 AvNY2
 drawsegment StL1_x_AvMA StL1fw
 drawsegment StL1_x_AvNY2 StL1fe
 
-% H St (W of Pennsylvania Av)
-translate StH1p t bs AvPA1_x_St19
-translate StH1f t tw StH1p
-line StH1 StH1p StH1f
-intersection StH1_x_AvPA1 StH1 AvPA1
-drawsegment StH1_x_AvPA1 StH1f
-fillrectangle AvPA1_x_St19 StH1_x_AvPA1
-
-% 18th St
-translate St18f t tn StH1_x_AvPA1
-line St18 StH1_x_AvPA1 St18f
+% 18th St (midway between M St and N St on Connecticut Av)
+intersection AvCT_x_StN AvCT StN
+towards St18p AvCT_x_StM AvCT_x_StN 0.5
+translate St18f t tn St18p
+line St18 St18p St18f
 drawline St18
 
+% H St (W of Pennsylvania Av)
+intersection AvPA1_x_St18 AvPA1 St18
+translate StH1f t tw AvPA1_x_St18
+line StH1 AvPA1_x_St18 StH1f
+drawsegment AvPA1_x_St18 StH1f
 
 
+
+
+
+% fill in the remaining "parks"
+fillrectangle AvCT_x_StN AvCT_x_StM
+fillrectangle AvPA1_x_St19 AvPA1_x_St18
+intersection St7_x_AvMA St7 AvMA
+fillrectangle St7_x_AvMA St9_x_AvMA
+intersection St7_x_StF St7 StF
+intersection St9_x_StG St9 StG
+fillrectangle St7_x_StF St9_x_StG
+intersection St7_x_Capitol St7 CapitolEW
+intersection St9_x_AvPA2 St9 AvPA2
+fillrectangle St7_x_Capitol St9_x_AvPA2
+fillrectangle StL1_x_AvNY2 AvNY2_x_St4_1_2
+intersection StH3_x_St5 StH3 St5
+intersection StD_x_St4 StD St4
+fillrectangle StH3_x_St5 StD_x_St4
+intersection AvIN2_x_St1W AvIN2 St1W
+fillrectangle AvIN2_x_AvNJ1 AvIN2_x_St1W
+
+% Define Thomas Circle Park. Note that this is only
+% circular, curved, or arc shaped feature in the entire plan.
+translate CirTp t b2n AvMA_x_AvVT
+circle CirT AvMA_x_AvVT CirTp
+fillcircle CirT
 
 
 
@@ -689,8 +749,8 @@ intersection lab Lns CapitolNS
 printat lab {Capitol}
 intersection lab Lns St1W
 printat lab {1}
-%intersection lab Lns St2
-%printat lab {2}
+intersection lab Lns St2
+printat lab {2}
 intersection lab Lns St3
 printat lab {3}
 intersection lab Lns St4
@@ -699,16 +759,16 @@ intersection lab Lns St4_1_2
 printat lab {4h}
 intersection lab Lns St5
 printat lab {5}
-%intersection lab Lns St6
-%printat lab {6}
+intersection lab Lns St6
+printat lab {6}
 intersection lab Lns St7
 printat lab {7}
 intersection lab Lns St8
 printat lab {8}
 intersection lab Lns St9
 printat lab {9}
-%intersection lab Lns St10
-%printat lab {10}
+intersection lab Lns St10
+printat lab {10}
 intersection lab Lns St11
 printat lab {11}
 intersection lab Lns St13
@@ -729,6 +789,6 @@ intersection lab Lns St21
 printat lab {21}
 intersection lab Lns St23
 printat lab {23}
-%intersection lab Lns St24
-%printat lab {24}
+intersection lab Lns St24
+printat lab {24}
 
