@@ -1,0 +1,1064 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE figure SYSTEM "GeoCons.dtd">
+<?xml-stylesheet href="GeoConsHTML.xsl" type="text/xsl"?>
+
+<figure>
+	<draw>
+		<dimensions width="260" height="150"></dimensions>
+	</draw>
+
+	<define>
+		<fixed_number value="160">C_x</fixed_number>
+		<fixed_number value="40">C_y</fixed_number>
+		<fixed_number value="66.076">W_x</fixed_number>
+		<fixed_number value="73.984">W_y</fixed_number>
+		<fixed_number value="52.192">A_x</fixed_number>
+		<fixed_number value="-394.736">A_y</fixed_number>
+		<fixed_number value="1.92">b</fixed_number>
+		<fixed_number value="-1.92">bneg</fixed_number>
+		<fixed_number value="633.6">f</fixed_number>
+		<fixed_number value="-633.6">negf</fixed_number>
+		<fixed_point x="0" y="0">t</fixed_point>
+		<fixed_point x="0" y="633.6">tn</fixed_point>
+		<fixed_point x="0" y="-633.6">ts</fixed_point>
+		<fixed_point x="633.6" y="0">te</fixed_point>
+		<fixed_point x="-633.6" y="0">tw</fixed_point>
+		<fixed_point x="160" y="40">C</fixed_point>
+	</define>
+
+	<labels>
+		<point_label direction="90"><point>C</point></point_label>
+	</labels>
+
+	<define>
+		<fixed_number value="159.04">Cw_x</fixed_number>
+		<fixed_point x="159.04" y="40">Cw</fixed_point>
+	</define>
+
+	<labels fontsize="4" color="D23982">
+		<point_label type="none" direction="225"><point>Cw</point></point_label>
+	</labels>
+
+	<define>
+		<fixed_number value="160.96">Ce_x</fixed_number>
+		<fixed_point x="160.96" y="40">Ce</fixed_point>
+	</define>
+
+	<labels fontsize="4" color="D23982">
+		<point_label type="none" direction="315"><point>Ce</point></point_label>
+	</labels>
+
+	<define>
+		<fixed_point x="66.076" y="73.984">W</fixed_point>
+	</define>
+
+	<labels fontsize="4" color="D23982">
+		<point_label direction="0"><point>W</point></point_label>
+	</labels>
+
+	<define>
+		<fixed_number value="74.944">Wn_y</fixed_number>
+		<fixed_point x="66.076" y="74.944">Wn</fixed_point>
+	</define>
+
+	<labels fontsize="4" color="D23982">
+		<point_label type="none" direction="135"><point>Wn</point></point_label>
+	</labels>
+
+	<define>
+		<fixed_number value="73.024">Ws_y</fixed_number>
+		<fixed_point x="66.076" y="73.024">Ws</fixed_point>
+	</define>
+
+	<labels fontsize="4" color="D23982">
+		<point_label type="none" direction="225"><point>Ws</point></point_label>
+	</labels>
+
+	<construct>
+		<ruler><new_line>AvPA2</new_line><point>Cw</point><point>Ws</point></ruler>
+	</construct>
+
+	<draw color="D23982">
+		<segment><point>Ws</point><point>Cw</point></segment>
+	</draw>
+
+	<define>
+		<fixed_point x="66.076" y="40">J</fixed_point>
+	</define>
+
+	<labels fontsize="4" color="D23982">
+		<point_label type="none" direction="225"><point>J</point></point_label>
+	</labels>
+
+	<construct>
+		<translate><new_point>Cns</new_point><vector><point>t</point><point>tn</point></vector><point>C</point></translate>
+		<ruler><new_line>CapitolNS</new_line><point>C</point><point>Cns</point></ruler>
+	</construct>
+
+	<draw color="8=9900">
+		<line>CapitolNS</line>
+	</draw>
+
+	<construct>
+		<translate><new_point>Cew</new_point><vector><point>t</point><point>te</point></vector><point>C</point></translate>
+		<ruler><new_line>CapitolEW</new_line><point>C</point><point>Cew</point></ruler>
+	</construct>
+
+	<draw color="8=9900">
+		<line>CapitolEW</line>
+	</draw>
+
+	<construct>
+		<translate><new_point>Wew</new_point><vector><point>t</point><point>te</point></vector><point>Ws</point></translate>
+		<ruler><new_line>StF</new_line><point>Ws</point><point>Wew</point></ruler>
+	</construct>
+
+	<draw color="8=9900">
+		<line>StF</line>
+	</draw>
+
+	<construct>
+		<translate><new_point>St16f</new_point><vector><point>t</point><point>tn</point></vector><point>Wn</point></translate>
+		<ruler><new_line>St16</new_line><point>Wn</point><point>St16f</point></ruler>
+	</construct>
+
+	<draw color="8=9900">
+		<segment><point>Wn</point><point>St16f</point></segment>
+	</draw>
+
+	<construct>
+		<rotate><new_point>RotAvIN</new_point><center>J</center><angle>19.56</angle><point>Cw</point></rotate>
+		<ruler><new_line>AvIN1</new_line><point>J</point><point>RotAvIN</point></ruler>
+		<line_reflection><new_point>AvNY1p</new_point><line>St16</line><point>Cw</point></line_reflection>
+		<ruler><new_line>AvNY1</new_line><point>Ws</point><point>AvNY1p</point></ruler>
+	</construct>
+
+	<draw color="8=9900">
+		<segment><point>Ws</point><point>AvNY1p</point></segment>
+	</draw>
+
+	<construct>
+		<intersection><new_point>AvIN1_x_AvPA2</new_point><line>AvIN1</line><line>AvPA2</line></intersection>
+		<translate><new_point>AvIN1_x_AvPA2e</new_point><vector><point>t</point><point>te</point></vector><point>AvIN1_x_AvPA2</point></translate>
+		<ruler><new_line>StC</new_line><point>AvIN1_x_AvPA2</point><point>AvIN1_x_AvPA2e</point></ruler>
+	</construct>
+
+	<draw color="8=9900">
+		<line>StC</line>
+	</draw>
+
+	<construct>
+		<segment_bisector><new_line>St8</new_line><point>J</point><point>Cw</point></segment_bisector>
+	</construct>
+
+	<draw color="8=9900">
+		<line>St8</line>
+	</draw>
+
+	<construct>
+		<translate><new_point>AvMD1a</new_point><vector><point>t</point><point>tw</point></vector><point>Cw</point></translate>
+		<rotate><new_point>RotAvMD1</new_point><center>Cw</center><angle>19.56</angle><point>AvMD1a</point></rotate>
+		<ruler><new_line>AvMD1</new_line><point>Cw</point><point>RotAvMD1</point></ruler>
+	</construct>
+
+	<draw color="8=9900">
+		<segment><point>Cw</point><point>RotAvMD1</point></segment>
+	</draw>
+
+	<construct>
+		<translate><new_point>AvVAa</new_point><vector><point>t</point><point>te</point></vector><point>J</point></translate>
+		<rotate><new_point>RotAvVA</new_point><center>J</center><angle>-19.56</angle><point>AvVAa</point></rotate>
+		<ruler><new_line>AvVA</new_line><point>J</point><point>RotAvVA</point></ruler>
+	</construct>
+
+	<draw color="8=9900">
+		<segment><point>J</point><point>RotAvVA</point></segment>
+	</draw>
+
+	<define>
+		<fixed_point x="52.192" y="-394.736">A</fixed_point>
+	</define>
+
+	<construct>
+		<ruler><new_line>AvDE1</new_line><point>Cw</point><point>A</point></ruler>
+	</construct>
+
+	<draw color="B<8801">
+		<segment><point>Cw</point><point>A</point></segment>
+	</draw>
+
+	<construct>
+		<line_reflection><new_point>AvNJ2f</new_point><line>CapitolNS</line><point>A</point></line_reflection>
+		<ruler><new_line>AvNJ2</new_line><point>Ce</point><point>AvNJ2f</point></ruler>
+	</construct>
+
+	<draw color="B<8801">
+		<segment><point>Ce</point><point>AvNJ2f</point></segment>
+	</draw>
+
+	<construct>
+		<intersection><new_point>CapitiolEW_x_St8</new_point><line>CapitolEW</line><line>St8</line></intersection>
+	</construct>
+
+	<define>
+		<fixed_number value="227.008">h</fixed_number>
+		<fixed_point x="227.008" y="40">L</fixed_point>
+	</define>
+
+	<labels fontsize="4" color="B<8801">
+		<point_label type="none" direction="315"><point>L</point></point_label>
+	</labels>
+
+	<construct>
+		<segment_bisector><new_line>St5E</new_line><point>Ce</point><point>L</point></segment_bisector>
+	</construct>
+
+	<draw color="008==2">
+		<line>St5E</line>
+	</draw>
+
+	<construct>
+		<parallel><new_line>St12E</new_line><point>L</point><line>St5E</line></parallel>
+	</construct>
+
+	<draw color="008==2">
+		<line>St12E</line>
+	</draw>
+
+	<construct>
+		<intersection><new_point>T</new_point><line>St5E</line><line>StC</line></intersection>
+	</construct>
+
+	<labels fontsize="4" color="008==2">
+		<point_label type="none" direction="45"><point>T</point></point_label>
+	</labels>
+
+	<construct>
+		<ruler><new_line>AvMA2</new_line><point>T</point><point>L</point></ruler>
+		<intersection><new_point>CapitolNS_x_AvMA</new_point><line>CapitolNS</line><line>AvMA2</line></intersection>
+	</construct>
+
+	<draw color="008==2">
+		<segment><point>L</point><point>CapitolNS_x_AvMA</point></segment>
+	</draw>
+
+	<construct>
+		<rotate><new_point>AvMAp</new_point><center>CapitolNS_x_AvMA</center><angle>1.80</angle><point>T</point></rotate>
+		<ruler><new_line>AvMA</new_line><point>AvMAp</point><point>CapitolNS_x_AvMA</point></ruler>
+		<towards><new_point>AvMAf</new_point><vector><point>AvMAp</point><point>CapitolNS_x_AvMA</point></vector><coefficient>633.6</coefficient></towards>
+	</construct>
+
+	<draw color="008==2">
+		<segment><point>CapitolNS_x_AvMA</point><point>AvMAf</point></segment>
+	</draw>
+
+	<construct>
+		<intersection><new_point>AvMA_x_St16</new_point><line>AvMA</line><line>St16</line></intersection>
+		<translate><new_point>StNf</new_point><vector><point>t</point><point>te</point></vector><point>AvMA_x_St16</point></translate>
+		<ruler><new_line>StN</new_line><point>AvMA_x_St16</point><point>StNf</point></ruler>
+	</construct>
+
+	<draw color="008==2">
+		<line>StN</line>
+	</draw>
+
+	<construct>
+		<intersection><new_point>V</new_point><line>AvMA</line><line>St8</line></intersection>
+		<translate><new_point>StKf</new_point><vector><point>t</point><point>te</point></vector><point>V</point></translate>
+		<ruler><new_line>StK</new_line><point>V</point><point>StKf</point></ruler>
+	</construct>
+
+	<draw color="008==2">
+		<line>StK</line>
+	</draw>
+
+	<labels fontsize="4" color="008==2">
+		<point_label type="none" direction="45"><point>V</point></point_label>
+	</labels>
+
+	<construct>
+		<line_reflection><new_point>AvNJ1f</new_point><line>CapitolEW</line><point>A</point></line_reflection>
+		<ruler><new_line>AvNJ1</new_line><point>Cw</point><point>AvNJ1f</point></ruler>
+		<intersection><new_point>AvNJ1f</new_point><line>AvNJ1</line><line>StK</line></intersection>
+	</construct>
+
+	<draw color="B<8801">
+		<segment><point>Cw</point><point>AvNJ1f</point></segment>
+	</draw>
+
+	<construct>
+		<line_reflection><new_point>AvDE2f</new_point><line>CapitolNS</line><point>AvNJ1f</point></line_reflection>
+		<ruler><new_line>AvDE2</new_line><point>Ce</point><point>AvDE2f</point></ruler>
+	</construct>
+
+	<draw color="B<8801">
+		<segment><point>Ce</point><point>AvDE2f</point></segment>
+	</draw>
+
+	<construct>
+		<intersection><new_point>AvMa_x_AvNJ1</new_point><line>AvMA</line><line>AvNJ1</line></intersection>
+		<translate><new_point>St1Wf</new_point><vector><point>t</point><point>tn</point></vector><point>AvMa_x_AvNJ1</point></translate>
+		<ruler><new_line>St1W</new_line><point>AvMa_x_AvNJ1</point><point>St1Wf</point></ruler>
+		<intersection><new_point>St1Wf</new_point><line>St1W</line><line>AvDE1</line></intersection>
+	</construct>
+
+	<draw color="B<8801">
+		<segment><point>AvMa_x_AvNJ1</point><point>St1Wf</point></segment>
+	</draw>
+
+	<construct>
+		<intersection><new_point>AvMa_x_AvDE2</new_point><line>AvMA</line><line>AvDE2</line></intersection>
+		<translate><new_point>St1Ef</new_point><vector><point>t</point><point>tn</point></vector><point>AvMa_x_AvDE2</point></translate>
+		<ruler><new_line>St1E</new_line><point>AvMa_x_AvDE2</point><point>St1Ef</point></ruler>
+		<intersection><new_point>St1Ef</new_point><line>St1E</line><line>AvNJ2</line></intersection>
+	</construct>
+
+	<draw color="B<8801">
+		<segment><point>AvMa_x_AvDE2</point><point>St1Ef</point></segment>
+	</draw>
+
+	<construct>
+		<translate><new_point>StEf</new_point><vector><point>t</point><point>te</point></vector><point>AvMa_x_AvDE2</point></translate>
+		<ruler><new_line>StE</new_line><point>AvMa_x_AvDE2</point><point>StEf</point></ruler>
+	</construct>
+
+	<draw color="B<8801">
+		<line>StE</line>
+	</draw>
+
+	<construct>
+		<intersection><new_point>AvMA_x_AvNJ1</new_point><line>AvMA</line><line>AvNJ1</line></intersection>
+		<translate><new_point>StG2f</new_point><vector><point>t</point><point>te</point></vector><point>AvMA_x_AvNJ1</point></translate>
+		<ruler><new_line>StG2</new_line><point>AvMA_x_AvNJ1</point><point>StG2f</point></ruler>
+	</construct>
+
+	<draw color="B<8801">
+		<segment><point>AvMA_x_AvNJ1</point><point>StG2f</point></segment>
+	</draw>
+
+	<construct>
+		<intersection><new_point>CapitolEW_x_St8</new_point><line>CapitolEW</line><line>St8</line></intersection>
+		<intersection><new_point>CapitolEW_x_St1W</new_point><line>CapitolEW</line><line>St1W</line></intersection>
+		<segment_bisector><new_line>St4_1_2</new_line><point>CapitolEW_x_St8</point><point>CapitolEW_x_St1W</point></segment_bisector>
+	</construct>
+
+	<draw color="B<8801">
+		<line>St4_1_2</line>
+	</draw>
+
+	<construct>
+		<translate><new_point>StGp</new_point><vector><point>Ws</point><point>Wn</point></vector><point>Wn</point></translate>
+		<translate><new_point>StGf</new_point><vector><point>t</point><point>tw</point></vector><point>StGp</point></translate>
+		<ruler><new_line>StG</new_line><point>StGp</point><point>StGf</point></ruler>
+		<intersection><new_point>StGp</new_point><line>StG</line><line>AvNJ1</line></intersection>
+	</construct>
+
+	<draw color="8=9900">
+		<segment><point>StGp</point><point>StGf</point></segment>
+	</draw>
+
+	<construct>
+		<intersection><new_point>AvIN1_x_St4_1_2</new_point><line>AvIN1</line><line>St4_1_2</line></intersection>
+	</construct>
+
+	<draw color="8=9900">
+		<segment><point>J</point><point>AvIN1_x_St4_1_2</point></segment>
+	</draw>
+
+	<construct>
+		<line_reflection><new_point>AvIN2f</new_point><line>St4_1_2</line><point>J</point></line_reflection>
+		<ruler><new_line>AvIN2</new_line><point>AvIN1_x_St4_1_2</point><point>AvIN2f</point></ruler>
+		<intersection><new_point>AvIN2f</new_point><line>AvIN2</line><line>AvNJ1</line></intersection>
+	</construct>
+
+	<draw color="8=9900">
+		<segment><point>AvIN1_x_St4_1_2</point><point>AvIN2f</point></segment>
+	</draw>
+
+	<construct>
+		<translate><new_point>StDf</new_point><vector><point>t</point><point>te</point></vector><point>AvIN1_x_St4_1_2</point></translate>
+		<ruler><new_line>StD</new_line><point>AvIN1_x_St4_1_2</point><point>StDf</point></ruler>
+	</construct>
+
+	<draw color="B<8801">
+		<line>StD</line>
+	</draw>
+
+	<construct>
+		<ruler><new_line>AvNY2</new_line><point>Wn</point><point>V</point></ruler>
+		<towards><new_point>AvNY2f</new_point><vector><point>Wn</point><point>V</point></vector><coefficient>633.6</coefficient></towards>
+	</construct>
+
+	<draw color="008==2">
+		<segment><point>Wn</point><point>AvNY2f</point></segment>
+	</draw>
+
+	<construct>
+		<line_reflection><new_point>AvPA1f</new_point><line>St16</line><point>AvNY2f</point></line_reflection>
+		<ruler><new_line>AvPA1</new_line><point>Wn</point><point>AvPA1f</point></ruler>
+	</construct>
+
+	<draw color="008==2">
+		<segment><point>Wn</point><point>AvPA1f</point></segment>
+	</draw>
+
+	<construct>
+		<intersection><new_point>AvPA1_x_StK</new_point><line>AvPA1</line><line>StK</line></intersection>
+		<translate><new_point>St23f</new_point><vector><point>t</point><point>tn</point></vector><point>AvPA1_x_StK</point></translate>
+		<ruler><new_line>St23</new_line><point>AvPA1_x_StK</point><point>St23f</point></ruler>
+	</construct>
+
+	<draw color="008==2">
+		<line>St23</line>
+	</draw>
+
+	<construct>
+		<ruler><new_line>AvMD2</new_line><point>Ce</point><point>T</point></ruler>
+		<towards><new_point>AvMDf</new_point><vector><point>Ce</point><point>T</point></vector><coefficient>633.6</coefficient></towards>
+	</construct>
+
+	<draw color="008==2">
+		<segment><point>Ce</point><point>AvMDf</point></segment>
+	</draw>
+
+	<construct>
+		<line_reflection><new_point>S</new_point><line>CapitolEW</line><point>T</point></line_reflection>
+	</construct>
+
+	<labels fontsize="4" color="008==2">
+		<point_label type="none" direction="315"><point>S</point></point_label>
+	</labels>
+
+	<construct>
+		<ruler><new_line>AvPA3</new_line><point>Ce</point><point>S</point></ruler>
+		<towards><new_point>AvPA3f</new_point><vector><point>Ce</point><point>S</point></vector><coefficient>633.6</coefficient></towards>
+	</construct>
+
+	<draw color="008==2">
+		<segment><point>Ce</point><point>AvPA3f</point></segment>
+	</draw>
+
+	<construct>
+		<ruler><new_line>AvNC</new_line><point>S</point><point>L</point></ruler>
+	</construct>
+
+	<draw color="008==2">
+		<segment><point>S</point><point>L</point></segment>
+	</draw>
+
+	<construct>
+		<perpendicular><new_line>AvVT</new_line><point>Wn</point><line>AvMA</line></perpendicular>
+		<intersection><new_point>AvMA_x_AvVT</new_point><line>AvMA</line><line>AvVT</line></intersection>
+		<towards><new_point>AvVTf</new_point><vector><point>Wn</point><point>AvMA_x_AvVT</point></vector><coefficient>633.6</coefficient></towards>
+	</construct>
+
+	<draw color="D04C15">
+		<segment><point>Wn</point><point>AvVTf</point></segment>
+	</draw>
+
+	<construct>
+		<translate><new_point>StMf</new_point><vector><point>t</point><point>te</point></vector><point>AvMA_x_AvVT</point></translate>
+		<ruler><new_line>StM</new_line><point>AvMA_x_AvVT</point><point>StMf</point></ruler>
+	</construct>
+
+	<draw color="D04C15">
+		<line>StM</line>
+	</draw>
+
+	<construct>
+		<line_reflection><new_point>AvCTf</new_point><line>St16</line><point>AvMA_x_AvVT</point></line_reflection>
+		<ruler><new_line>AvCT</new_line><point>Wn</point><point>AvCTf</point></ruler>
+		<intersection><new_point>AvMA_x_AvCT</new_point><line>AvMA</line><line>AvCT</line></intersection>
+	</construct>
+
+	<draw color="D04C15">
+		<segment><point>Wn</point><point>AvMA_x_AvCT</point></segment>
+	</draw>
+
+	<construct>
+		<translate><new_point>StPf</new_point><vector><point>t</point><point>te</point></vector><point>AvMA_x_AvCT</point></translate>
+		<ruler><new_line>StP</new_line><point>AvMA_x_AvCT</point><point>StPf</point></ruler>
+		<intersection><new_point>AvVT_x_StP</new_point><line>AvVT</line><line>StP</line></intersection>
+	</construct>
+
+	<draw color="D04C15">
+		<segment><point>AvMA_x_AvCT</point><point>AvVT_x_StP</point></segment>
+	</draw>
+
+	<construct>
+		<ruler><new_line>AvNH</new_line><point>AvPA1_x_StK</point><point>AvMA_x_AvCT</point></ruler>
+		<towards><new_point>AvNHf</new_point><vector><point>AvPA1_x_StK</point><point>AvMA_x_AvCT</point></vector><coefficient>633.6</coefficient></towards>
+	</construct>
+
+	<draw color="D04C15">
+		<segment><point>AvPA1_x_StK</point><point>AvNHf</point></segment>
+	</draw>
+
+	<construct>
+		<intersection><new_point>AvCT_x_StM</new_point><line>AvCT</line><line>StM</line></intersection>
+		<ruler><new_line>AvRI</new_line><point>AvMA_x_St16</point><point>AvCT_x_StM</point></ruler>
+		<towards><new_point>AvRIf</new_point><vector><point>AvCT_x_StM</point><point>AvMA_x_St16</point></vector><coefficient>633.6</coefficient></towards>
+	</construct>
+
+	<draw color="D04C15">
+		<segment><point>AvCT_x_StM</point><point>AvRIf</point></segment>
+	</draw>
+
+	<construct>
+		<translate><new_point>St13f</new_point><vector><point>t</point><point>tn</point></vector><point>AvVT_x_StP</point></translate>
+		<ruler><new_line>St13</new_line><point>AvVT_x_StP</point><point>St13f</point></ruler>
+	</construct>
+
+	<draw color="D04C15">
+		<line>St13</line>
+	</draw>
+
+	<construct>
+		<translate><new_point>St14f</new_point><vector><point>t</point><point>tn</point></vector><point>AvMA_x_AvVT</point></translate>
+		<ruler><new_line>St14</new_line><point>AvMA_x_AvVT</point><point>St14f</point></ruler>
+	</construct>
+
+	<draw color="D04C15">
+		<line>St14</line>
+	</draw>
+
+	<construct>
+		<translate><new_point>St19f</new_point><vector><point>t</point><point>tn</point></vector><point>AvMA_x_AvCT</point></translate>
+		<ruler><new_line>St19</new_line><point>AvMA_x_AvCT</point><point>St19f</point></ruler>
+	</construct>
+
+	<draw color="D04C15">
+		<line>St19</line>
+	</draw>
+
+	<construct>
+		<translate><new_point>St18Af</new_point><vector><point>t</point><point>tn</point></vector><point>AvCT_x_StM</point></translate>
+		<ruler><new_line>St18A</new_line><point>AvCT_x_StM</point><point>St18Af</point></ruler>
+	</construct>
+
+	<draw color="D04C15">
+		<segment><point>AvCT_x_StM</point><point>St18Af</point></segment>
+	</draw>
+
+	<construct>
+		<intersection><new_point>AvCT_x_StK</new_point><line>AvCT</line><line>StK</line></intersection>
+		<translate><new_point>St15Lf</new_point><vector><point>t</point><point>ts</point></vector><point>AvCT_x_StK</point></translate>
+		<ruler><new_line>St15L</new_line><point>AvCT_x_StK</point><point>St15Lf</point></ruler>
+	</construct>
+
+	<draw color="D04C15">
+		<segment><point>AvCT_x_StK</point><point>St15Lf</point></segment>
+	</draw>
+
+	<construct>
+		<line_reflection><new_point>AvVT_x_StK</new_point><line>St16</line><point>AvCT_x_StK</point></line_reflection>
+		<line_reflection><new_point>St17Lf</new_point><line>St16</line><point>St15Lf</point></line_reflection>
+		<ruler><new_line>St17L</new_line><point>AvVT_x_StK</point><point>St17Lf</point></ruler>
+	</construct>
+
+	<draw color="D04C15">
+		<segment><point>AvVT_x_StK</point><point>St17Lf</point></segment>
+	</draw>
+
+	<construct>
+		<intersection><new_point>AvNY2_x_St13</new_point><line>AvNY2</line><line>St13</line></intersection>
+		<intersection><new_point>AvPA1_x_St19</new_point><line>AvPA1</line><line>St19</line></intersection>
+		<ruler><new_line>StH2</new_line><point>AvNY2_x_St13</point><point>AvPA1_x_St19</point></ruler>
+	</construct>
+
+	<draw color="D04C15">
+		<segment><point>AvNY2_x_St13</point><point>AvPA1_x_St19</point></segment>
+	</draw>
+
+	<define>
+		<fixed_number value="2.4">d</fixed_number>
+		<fixed_number value="-2.4">dneg</fixed_number>
+		<fixed_point x="0" y="2.4">bn</fixed_point>
+		<fixed_point x="0" y="-2.4">bs</fixed_point>
+		<fixed_point x="2.4" y="0">be</fixed_point>
+		<fixed_point x="-2.4" y="0">bw</fixed_point>
+		<fixed_number value="1.92">d2</fixed_number>
+		<fixed_number value="-1.92">d2neg</fixed_number>
+		<fixed_point x="0" y="1.92">b2n</fixed_point>
+		<fixed_point x="0" y="-1.92">b2s</fixed_point>
+		<fixed_point x="1.92" y="0">b2e</fixed_point>
+		<fixed_point x="-1.92" y="0">b2w</fixed_point>
+	</define>
+
+	<construct>
+		<translate><new_point>St17U_x_StK</new_point><vector><point>t</point><point>be</point></vector><point>AvCT_x_StK</point></translate>
+		<translate><new_point>St17Uf</new_point><vector><point>t</point><point>tn</point></vector><point>St17U_x_StK</point></translate>
+		<ruler><new_line>St17U</new_line><point>St17U_x_StK</point><point>St17Uf</point></ruler>
+		<intersection><new_point>AvCT_x_St17U</new_point><line>AvCT</line><line>St17U</line></intersection>
+	</construct>
+
+	<draw color="20:299">
+		<segment><point>AvCT_x_St17U</point><point>St17Uf</point></segment>
+	</draw>
+
+	<construct>
+		<translate><new_point>St15U_x_StK</new_point><vector><point>t</point><point>bw</point></vector><point>AvVT_x_StK</point></translate>
+		<translate><new_point>St15Uf</new_point><vector><point>t</point><point>tn</point></vector><point>St15U_x_StK</point></translate>
+		<ruler><new_line>St15U</new_line><point>St15U_x_StK</point><point>St15Uf</point></ruler>
+		<intersection><new_point>AvVT_x_St15U</new_point><line>AvVT</line><line>St15U</line></intersection>
+	</construct>
+
+	<draw color="20:299">
+		<segment><point>AvVT_x_St15U</point><point>St15Uf</point></segment>
+	</draw>
+
+	<construct>
+		<ruler><new_line>StIU</new_line><point>AvCT_x_St17U</point><point>AvVT_x_St15U</point></ruler>
+		<intersection><new_point>StIU_x_AvPA1</new_point><line>StIU</line><line>AvPA1</line></intersection>
+		<intersection><new_point>StIU_x_AvNY2</new_point><line>StIU</line><line>AvNY2</line></intersection>
+	</construct>
+
+	<draw color="20:299">
+		<segment><point>StIU_x_AvPA1</point><point>StIU_x_AvNY2</point></segment>
+	</draw>
+
+	<construct>
+		<translate><new_point>St21f</new_point><vector><point>t</point><point>tn</point></vector><point>StIU_x_AvPA1</point></translate>
+		<ruler><new_line>St21</new_line><point>StIU_x_AvPA1</point><point>St21f</point></ruler>
+	</construct>
+
+	<draw color="20:299">
+		<line>St21</line>
+	</draw>
+
+	<construct>
+		<intersection><new_point>St13_x_StH2</new_point><line>St13</line><line>StH2</line></intersection>
+		<translate><new_point>St13_x_StH3</new_point><vector><point>t</point><point>b2s</point></vector><point>St13_x_StH2</point></translate>
+		<translate><new_point>StH3f</new_point><vector><point>t</point><point>te</point></vector><point>St13_x_StH3</point></translate>
+		<ruler><new_line>StH3</new_line><point>St13_x_StH3</point><point>StH3f</point></ruler>
+		<intersection><new_point>StH3_x_AvNY2</new_point><line>StH3</line><line>AvNY2</line></intersection>
+		<intersection><new_point>StH3_x_AvMA</new_point><line>StH3</line><line>AvMA</line></intersection>
+	</construct>
+
+	<draw color="20:299">
+		<segment><point>StH3_x_AvNY2</point><point>StH3_x_AvMA</point></segment>
+	</draw>
+
+	<construct>
+		<translate><new_point>St3f</new_point><vector><point>t</point><point>tn</point></vector><point>StH3_x_AvMA</point></translate>
+		<ruler><new_line>St3</new_line><point>StH3_x_AvMA</point><point>St3f</point></ruler>
+	</construct>
+
+	<draw color="20:299">
+		<line>St3</line>
+	</draw>
+
+	<construct>
+		<translate><new_point>StILp</new_point><vector><point>t</point><point>b2s</point></vector><point>StIU_x_AvNY2</point></translate>
+		<translate><new_point>StILf</new_point><vector><point>t</point><point>te</point></vector><point>StIU_x_AvNY2</point></translate>
+		<ruler><new_line>StIL</new_line><point>StILp</point><point>StILf</point></ruler>
+		<intersection><new_point>StIL_x_AvNY2</new_point><line>StIL</line><line>AvNY2</line></intersection>
+		<intersection><new_point>StIL_x_AvMA</new_point><line>StIL</line><line>AvMA</line></intersection>
+	</construct>
+
+	<draw color="20:299">
+		<segment><point>StIL_x_AvNY2</point><point>StIL_x_AvMA</point></segment>
+	</draw>
+
+	<construct>
+		<translate><new_point>St5f</new_point><vector><point>t</point><point>tn</point></vector><point>StIL_x_AvMA</point></translate>
+		<ruler><new_line>St5</new_line><point>StIL_x_AvMA</point><point>St5f</point></ruler>
+	</construct>
+
+	<draw color="20:299">
+		<line>St5</line>
+	</draw>
+
+	<construct>
+		<line_reflection><new_point>St4p</new_point><line>St4_1_2</line><point>StIL_x_AvMA</point></line_reflection>
+		<translate><new_point>St4f</new_point><vector><point>t</point><point>tn</point></vector><point>St4p</point></translate>
+		<ruler><new_line>St4</new_line><point>St4p</point><point>St4f</point></ruler>
+	</construct>
+
+	<draw color="20:299">
+		<line>St4</line>
+	</draw>
+
+	<construct>
+		<towards><new_point>St11p</new_point><vector><point>StIL_x_AvNY2</point><point>StIU_x_AvNY2</point></vector><coefficient>0.5</coefficient></towards>
+		<translate><new_point>St11f</new_point><vector><point>t</point><point>tn</point></vector><point>St11p</point></translate>
+		<ruler><new_line>St11</new_line><point>St11p</point><point>St11f</point></ruler>
+	</construct>
+
+	<draw color="20:299">
+		<line>St11</line>
+	</draw>
+
+	<construct>
+		<intersection><new_point>St5_x_AvNY2</new_point><line>St5</line><line>AvNY2</line></intersection>
+		<translate><new_point>St5f</new_point><vector><point>t</point><point>te</point></vector><point>St5_x_AvNY2</point></translate>
+		<ruler><new_line>StLU</new_line><point>St5_x_AvNY2</point><point>St5f</point></ruler>
+		<intersection><new_point>StLU_x_St4</new_point><line>StLU</line><line>St4</line></intersection>
+		<intersection><new_point>StLU_x_St11</new_point><line>StLU</line><line>St11</line></intersection>
+	</construct>
+
+	<draw color="20:299">
+		<segment><point>StLU_x_St4</point><point>StLU_x_St11</point></segment>
+	</draw>
+
+	<define>
+		<fixed_number value="0.96">halfb</fixed_number>
+		<fixed_number value="-0.96">neghalfb</fixed_number>
+		<fixed_point x="0" y="0.96">halfbn</fixed_point>
+		<fixed_point x="0" y="-0.96">halfbs</fixed_point>
+	</define>
+
+	<construct>
+		<translate><new_point>V2p</new_point><vector><point>t</point><point>halfbn</point></vector><point>V</point></translate>
+		<translate><new_point>V2f</new_point><vector><point>t</point><point>te</point></vector><point>V2p</point></translate>
+		<ruler><new_line>V2</new_line><point>V2p</point><point>V2f</point></ruler>
+		<intersection><new_point>St9_x_AvMA</new_point><line>V2</line><line>AvMA</line></intersection>
+		<translate><new_point>St9f</new_point><vector><point>t</point><point>tn</point></vector><point>St9_x_AvMA</point></translate>
+		<ruler><new_line>St9</new_line><point>St9_x_AvMA</point><point>St9f</point></ruler>
+	</construct>
+
+	<draw color="20:299">
+		<line>St9</line>
+	</draw>
+
+	<construct>
+		<intersection><new_point>St7_x_AvNY2</new_point><line>V2</line><line>AvNY2</line></intersection>
+		<translate><new_point>St7f</new_point><vector><point>t</point><point>tn</point></vector><point>St7_x_AvNY2</point></translate>
+		<ruler><new_line>St7</new_line><point>St7_x_AvNY2</point><point>St7f</point></ruler>
+	</construct>
+
+	<draw color="20:299">
+		<line>St7</line>
+	</draw>
+
+	<construct>
+		<intersection><new_point>St7_x_AvMA</new_point><line>St7</line><line>AvMA</line></intersection>
+		<intersection><new_point>AvNY2_x_St4_1_2</new_point><line>AvNY2</line><line>St4_1_2</line></intersection>
+		<translate><new_point>StL1p</new_point><vector><point>t</point><point>bs</point></vector><point>AvNY2_x_St4_1_2</point></translate>
+		<translate><new_point>StL1fe</new_point><vector><point>t</point><point>te</point></vector><point>StL1p</point></translate>
+		<translate><new_point>StL1fw</new_point><vector><point>t</point><point>tw</point></vector><point>StL1p</point></translate>
+		<ruler><new_line>StL1</new_line><point>StL1p</point><point>StL1fe</point></ruler>
+		<intersection><new_point>StL1_x_AvMA</new_point><line>StL1</line><line>AvMA</line></intersection>
+		<intersection><new_point>StL1_x_AvNY2</new_point><line>StL1</line><line>AvNY2</line></intersection>
+	</construct>
+
+	<draw color="20:299">
+		<segment><point>StL1_x_AvMA</point><point>StL1fw</point></segment>
+		<segment><point>StL1_x_AvNY2</point><point>StL1fe</point></segment>
+	</draw>
+
+	<construct>
+		<translate><new_point>StH1p</new_point><vector><point>t</point><point>bs</point></vector><point>AvPA1_x_St19</point></translate>
+		<translate><new_point>StH1f</new_point><vector><point>t</point><point>tw</point></vector><point>StH1p</point></translate>
+		<ruler><new_line>StH1</new_line><point>StH1p</point><point>StH1f</point></ruler>
+		<intersection><new_point>StH1_x_AvPA1</new_point><line>StH1</line><line>AvPA1</line></intersection>
+	</construct>
+
+	<draw color="20:299">
+		<segment><point>StH1_x_AvPA1</point><point>StH1f</point></segment>
+	</draw>
+
+	<construct>
+		<translate><new_point>St18f</new_point><vector><point>t</point><point>tn</point></vector><point>StH1_x_AvPA1</point></translate>
+		<ruler><new_line>St18</new_line><point>StH1_x_AvPA1</point><point>St18f</point></ruler>
+	</construct>
+
+	<draw color="20:299">
+		<line>St18</line>
+	</draw>
+
+	<define>
+		<fixed_point x="10" y="0">tlab</fixed_point>
+	</define>
+
+	<construct>
+		<translate><new_point>Lewp</new_point><vector><point>t</point><point>tlab</point></vector><point>L</point></translate>
+		<translate><new_point>Lewf</new_point><vector><point>t</point><point>tn</point></vector><point>Lewp</point></translate>
+		<ruler><new_line>Lew</new_line><point>Lewp</point><point>Lewf</point></ruler>
+		<intersection><new_point>lab</new_point><line>Lew</line><line>CapitolEW</line></intersection>
+	</construct>
+
+	<labels fontsize="4" color="20:299">
+		<text_label direction="0 distance="0""><point>lab</point><text>Capitol</text></text_label>
+	</labels>
+
+	<construct>
+		<intersection><new_point>lab</new_point><line>Lew</line><line>StC</line></intersection>
+	</construct>
+
+	<labels fontsize="4" color="637B83">
+		<text_label direction="0 distance="0""><point>lab</point><text>C</text></text_label>
+	</labels>
+
+	<construct>
+		<intersection><new_point>lab</new_point><line>Lew</line><line>StD</line></intersection>
+	</construct>
+
+	<labels fontsize="4" color="637B83">
+		<text_label direction="0 distance="0""><point>lab</point><text>D</text></text_label>
+	</labels>
+
+	<construct>
+		<intersection><new_point>lab</new_point><line>Lew</line><line>StE</line></intersection>
+	</construct>
+
+	<labels fontsize="4" color="637B83">
+		<text_label direction="0 distance="0""><point>lab</point><text>E</text></text_label>
+	</labels>
+
+	<construct>
+		<intersection><new_point>lab</new_point><line>Lew</line><line>StF</line></intersection>
+	</construct>
+
+	<labels fontsize="4" color="637B83">
+		<text_label direction="0 distance="0""><point>lab</point><text>F</text></text_label>
+	</labels>
+
+	<construct>
+		<intersection><new_point>lab</new_point><line>Lew</line><line>StG2</line></intersection>
+	</construct>
+
+	<labels fontsize="4" color="637B83">
+		<text_label direction="0 distance="0""><point>lab</point><text>G</text></text_label>
+	</labels>
+
+	<construct>
+		<intersection><new_point>lab</new_point><line>Lew</line><line>StH3</line></intersection>
+	</construct>
+
+	<labels fontsize="4" color="637B83">
+		<text_label direction="0 distance="0""><point>lab</point><text>H</text></text_label>
+	</labels>
+
+	<construct>
+		<intersection><new_point>lab</new_point><line>Lew</line><line>StIL</line></intersection>
+	</construct>
+
+	<labels fontsize="4" color="637B83">
+		<text_label direction="0 distance="0""><point>lab</point><text>I</text></text_label>
+	</labels>
+
+	<construct>
+		<intersection><new_point>lab</new_point><line>Lew</line><line>StK</line></intersection>
+	</construct>
+
+	<labels fontsize="4" color="637B83">
+		<text_label direction="0 distance="0""><point>lab</point><text>K</text></text_label>
+	</labels>
+
+	<construct>
+		<intersection><new_point>lab</new_point><line>Lew</line><line>StL1</line></intersection>
+	</construct>
+
+	<labels fontsize="4" color="637B83">
+		<text_label direction="0 distance="0""><point>lab</point><text>L</text></text_label>
+	</labels>
+
+	<construct>
+		<intersection><new_point>lab</new_point><line>Lew</line><line>StM</line></intersection>
+	</construct>
+
+	<labels fontsize="4" color="637B83">
+		<text_label direction="0 distance="0""><point>lab</point><text>M</text></text_label>
+	</labels>
+
+	<construct>
+		<intersection><new_point>lab</new_point><line>Lew</line><line>StN</line></intersection>
+	</construct>
+
+	<labels fontsize="4" color="637B83">
+		<text_label direction="0 distance="0""><point>lab</point><text>N</text></text_label>
+	</labels>
+
+	<construct>
+		<intersection><new_point>lab</new_point><line>Lew</line><line>StP</line></intersection>
+	</construct>
+
+	<labels fontsize="4" color="637B83">
+		<text_label direction="0 distance="0""><point>lab</point><text>P</text></text_label>
+	</labels>
+
+	<define>
+		<fixed_point x="0" y="10">tlab</fixed_point>
+	</define>
+
+	<construct>
+		<translate><new_point>Lnsp</new_point><vector><point>t</point><point>tlab</point></vector><point>AvMA_x_AvCT</point></translate>
+		<translate><new_point>Lnsf</new_point><vector><point>t</point><point>te</point></vector><point>Lnsp</point></translate>
+		<ruler><new_line>Lns</new_line><point>Lnsp</point><point>Lnsf</point></ruler>
+		<intersection><new_point>lab</new_point><line>Lns</line><line>St12E</line></intersection>
+	</construct>
+
+	<labels fontsize="4" color="637B83">
+		<text_label direction="0 distance="0""><point>lab</point><text>12E</text></text_label>
+	</labels>
+
+	<construct>
+		<intersection><new_point>lab</new_point><line>Lns</line><line>St5E</line></intersection>
+	</construct>
+
+	<labels fontsize="4" color="637B83">
+		<text_label direction="0 distance="0""><point>lab</point><text>5E</text></text_label>
+	</labels>
+
+	<construct>
+		<intersection><new_point>lab</new_point><line>Lns</line><line>St1E</line></intersection>
+	</construct>
+
+	<labels fontsize="4" color="637B83">
+		<text_label direction="0 distance="0""><point>lab</point><text>1E</text></text_label>
+	</labels>
+
+	<construct>
+		<intersection><new_point>lab</new_point><line>Lns</line><line>CapitolNS</line></intersection>
+	</construct>
+
+	<labels fontsize="4" color="637B83">
+		<text_label direction="0 distance="0""><point>lab</point><text>Capitol</text></text_label>
+	</labels>
+
+	<construct>
+		<intersection><new_point>lab</new_point><line>Lns</line><line>St1W</line></intersection>
+	</construct>
+
+	<labels fontsize="4" color="637B83">
+		<text_label direction="0 distance="0""><point>lab</point><text>1</text></text_label>
+	</labels>
+
+	<construct>
+		<intersection><new_point>lab</new_point><line>Lns</line><line>St3</line></intersection>
+	</construct>
+
+	<labels fontsize="4" color="637B83">
+		<text_label direction="0 distance="0""><point>lab</point><text>3</text></text_label>
+	</labels>
+
+	<construct>
+		<intersection><new_point>lab</new_point><line>Lns</line><line>St4</line></intersection>
+	</construct>
+
+	<labels fontsize="4" color="637B83">
+		<text_label direction="0 distance="0""><point>lab</point><text>4</text></text_label>
+	</labels>
+
+	<construct>
+		<intersection><new_point>lab</new_point><line>Lns</line><line>St4_1_2</line></intersection>
+	</construct>
+
+	<labels fontsize="4" color="637B83">
+		<text_label direction="0 distance="0""><point>lab</point><text>4h</text></text_label>
+	</labels>
+
+	<construct>
+		<intersection><new_point>lab</new_point><line>Lns</line><line>St5</line></intersection>
+	</construct>
+
+	<labels fontsize="4" color="637B83">
+		<text_label direction="0 distance="0""><point>lab</point><text>5</text></text_label>
+	</labels>
+
+	<construct>
+		<intersection><new_point>lab</new_point><line>Lns</line><line>St7</line></intersection>
+	</construct>
+
+	<labels fontsize="4" color="637B83">
+		<text_label direction="0 distance="0""><point>lab</point><text>7</text></text_label>
+	</labels>
+
+	<construct>
+		<intersection><new_point>lab</new_point><line>Lns</line><line>St8</line></intersection>
+	</construct>
+
+	<labels fontsize="4" color="637B83">
+		<text_label direction="0 distance="0""><point>lab</point><text>8</text></text_label>
+	</labels>
+
+	<construct>
+		<intersection><new_point>lab</new_point><line>Lns</line><line>St9</line></intersection>
+	</construct>
+
+	<labels fontsize="4" color="637B83">
+		<text_label direction="0 distance="0""><point>lab</point><text>9</text></text_label>
+	</labels>
+
+	<construct>
+		<intersection><new_point>lab</new_point><line>Lns</line><line>St11</line></intersection>
+	</construct>
+
+	<labels fontsize="4" color="637B83">
+		<text_label direction="0 distance="0""><point>lab</point><text>11</text></text_label>
+	</labels>
+
+	<construct>
+		<intersection><new_point>lab</new_point><line>Lns</line><line>St13</line></intersection>
+	</construct>
+
+	<labels fontsize="4" color="637B83">
+		<text_label direction="0 distance="0""><point>lab</point><text>13</text></text_label>
+	</labels>
+
+	<construct>
+		<intersection><new_point>lab</new_point><line>Lns</line><line>St14</line></intersection>
+	</construct>
+
+	<labels fontsize="4" color="637B83">
+		<text_label direction="0 distance="0""><point>lab</point><text>14</text></text_label>
+	</labels>
+
+	<construct>
+		<intersection><new_point>lab</new_point><line>Lns</line><line>St15U</line></intersection>
+	</construct>
+
+	<labels fontsize="4" color="637B83">
+		<text_label direction="0 distance="0""><point>lab</point><text>15</text></text_label>
+	</labels>
+
+	<construct>
+		<intersection><new_point>lab</new_point><line>Lns</line><line>St16</line></intersection>
+	</construct>
+
+	<labels fontsize="4" color="637B83">
+		<text_label direction="0 distance="0""><point>lab</point><text>16</text></text_label>
+	</labels>
+
+	<construct>
+		<intersection><new_point>lab</new_point><line>Lns</line><line>St17U</line></intersection>
+	</construct>
+
+	<labels fontsize="4" color="637B83">
+		<text_label direction="0 distance="0""><point>lab</point><text>17</text></text_label>
+	</labels>
+
+	<construct>
+		<intersection><new_point>lab</new_point><line>Lns</line><line>St18</line></intersection>
+	</construct>
+
+	<labels fontsize="4" color="637B83">
+		<text_label direction="0 distance="0""><point>lab</point><text>18</text></text_label>
+	</labels>
+
+	<construct>
+		<intersection><new_point>lab</new_point><line>Lns</line><line>St19</line></intersection>
+	</construct>
+
+	<labels fontsize="4" color="637B83">
+		<text_label direction="0 distance="0""><point>lab</point><text>19</text></text_label>
+	</labels>
+
+	<construct>
+		<intersection><new_point>lab</new_point><line>Lns</line><line>St21</line></intersection>
+	</construct>
+
+	<labels fontsize="4" color="637B83">
+		<text_label direction="0 distance="0""><point>lab</point><text>21</text></text_label>
+	</labels>
+
+	<construct>
+		<intersection><new_point>lab</new_point><line>Lns</line><line>St23</line></intersection>
+	</construct>
+
+	<labels fontsize="4" color="637B83">
+		<text_label direction="0 distance="0""><point>lab</point><text>23</text></text_label>
+	</labels>
+
+</figure>

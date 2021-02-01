@@ -3,11 +3,13 @@
 
 % Pierre Charles L’Enfant, dotted line map of Washington, D.C., 1791, before Aug. 19th, https://lccn.loc.gov/88694203 .
 
+dim 260 150
+
 % These constants are only used for proportionally adjusting the drawing to fit the display area. They
 % do not otherwise affect the geometry.
-number scal 0.006
-number offX 80
-number offY 30
+number scal 0.012
+number offX 160
+number offY 40
 
 
 

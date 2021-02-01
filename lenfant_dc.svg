@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="260mm" height="150mm" viewBox="0 0 260 150" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>GCLCOutputFigure</title>
+<rect fill="#FFF7E4" stroke="#000000" stroke-width="0" x="0.00" y="0.00" width="260.00" height="150.00"/>
+
+<!-- Changing color 210 57 130 -->
+
+<!-- Marking point C by circle -->
+<circle cx="160.00" cy="110.00" r="0.40" fill="none" stroke="#D23982" stroke-width="0.16"/>
+<text x="160.00" y="109.00" style="font-size:1.41pt; font-style:italic; fill:#D23982" text-anchor="middle">C</text>
+
+<!-- Marking point Cw -->
+<text x="158.04" y="111.00" style="font-size:1.41pt; font-style:italic; fill:#D23982" text-anchor="end" dy="1.405975">Cw</text>
+
+<!-- Marking point Ce -->
+<text x="161.96" y="111.00" style="font-size:1.41pt; font-style:italic; fill:#D23982" dy="1.405975">Ce</text>
+
+<!-- Marking point W by circle -->
+<circle cx="66.08" cy="76.02" r="0.40" fill="none" stroke="#D23982" stroke-width="0.16"/>
+<text x="67.08" y="76.02" style="font-size:1.41pt; font-style:italic; fill:#D23982" dy="0.702988">W</text>
+
+<!-- Marking point Wn -->
+<text x="65.08" y="74.06" style="font-size:1.41pt; font-style:italic; fill:#D23982" text-anchor="end">Wn</text>
+
+<!-- Marking point Ws -->
+<text x="65.08" y="77.98" style="font-size:1.41pt; font-style:italic; fill:#D23982" text-anchor="end" dy="1.405975">Ws</text>
+
+<!-- Drawing segment Ws Cw -->
+<line x1="66.08" y1="76.98" x2="159.04" y2="110.00" style="stroke:#D23982; stroke-width:0.16"/>
+
+<!-- Changing color 141 153 0 -->
+
+<!-- Marking point J -->
+<text x="65.08" y="111.00" style="font-size:1.41pt; font-style:italic; fill:#8D9900" text-anchor="end" dy="1.405975">J</text>
+
+<!-- Drawing line CapitolNS -->
+<line x1="160.00" y1="150.00" x2="160.00" y2="110.40" style="stroke:#8D9900; stroke-width:0.16"/>
+<line x1="160.00" y1="109.60" x2="160.00" y2="0.00" style="stroke:#8D9900; stroke-width:0.16"/>
+
+<!-- Drawing line CapitolEW -->
+<line x1="0.00" y1="110.00" x2="159.60" y2="110.00" style="stroke:#8D9900; stroke-width:0.16"/>
+<line x1="160.40" y1="110.00" x2="260.00" y2="110.00" style="stroke:#8D9900; stroke-width:0.16"/>
+
+<!-- Drawing line StF -->
+<line x1="0.00" y1="76.98" x2="260.00" y2="76.98" style="stroke:#8D9900; stroke-width:0.16"/>
+
+<!-- Drawing segment Wn St16f -->
+<line x1="66.08" y1="75.06" x2="66.08" y2="0.00" style="stroke:#8D9900; stroke-width:0.16"/>
+
+<!-- Drawing segment Ws AvNY1p -->
+<line x1="0.00" y1="100.45" x2="66.08" y2="76.98" style="stroke:#8D9900; stroke-width:0.16"/>
+
+<!-- Drawing line StC -->
+<line x1="0.00" y1="93.49" x2="260.00" y2="93.49" style="stroke:#8D9900; stroke-width:0.16"/>
+
+<!-- Drawing line St8 -->
+<line x1="112.56" y1="150.00" x2="112.56" y2="0.00" style="stroke:#8D9900; stroke-width:0.16"/>
+
+<!-- Drawing segment Cw RotAvMD1 -->
+<line x1="46.44" y1="150.00" x2="159.04" y2="110.00" style="stroke:#8D9900; stroke-width:0.16"/>
+
+<!-- Drawing segment J RotAvVA -->
+<line x1="178.68" y1="150.00" x2="66.08" y2="110.00" style="stroke:#8D9900; stroke-width:0.16"/>
+
+<!-- Changing color 188 136 1 -->
+
+<!-- Drawing segment Cw A -->
+<line x1="149.21" y1="150.00" x2="159.04" y2="110.00" style="stroke:#BC8801; stroke-width:0.16"/>
+
+<!-- Drawing segment Ce AvNJ2f -->
+<line x1="170.79" y1="150.00" x2="160.96" y2="110.00" style="stroke:#BC8801; stroke-width:0.16"/>
+
+<!-- Changing color 0 141 210 -->
+
+<!-- Marking point L -->
+<text x="228.01" y="111.00" style="font-size:1.41pt; font-style:italic; fill:#008DD2" dy="1.405975">L</text>
+
+<!-- Drawing line St5E -->
+<line x1="193.98" y1="150.00" x2="193.98" y2="0.00" style="stroke:#008DD2; stroke-width:0.16"/>
+
+<!-- Drawing line St12E -->
+<line x1="227.01" y1="150.00" x2="227.01" y2="0.00" style="stroke:#008DD2; stroke-width:0.16"/>
+
+<!-- Marking point T -->
+<text x="194.98" y="92.49" style="font-size:1.41pt; font-style:italic; fill:#008DD2" >T</text>
+
+<!-- Drawing segment L CapitolNS_x_AvMA -->
+<line x1="227.01" y1="110.00" x2="160.00" y2="76.50" style="stroke:#008DD2; stroke-width:0.16"/>
+
+<!-- Drawing segment CapitolNS_x_AvMA AvMAf -->
+<line x1="0.00" y1="2.68" x2="160.00" y2="76.50" style="stroke:#008DD2; stroke-width:0.16"/>
+
+<!-- Drawing line StN -->
+<line x1="0.00" y1="33.17" x2="260.00" y2="33.17" style="stroke:#008DD2; stroke-width:0.16"/>
+
+<!-- Drawing line StK -->
+<line x1="0.00" y1="54.61" x2="260.00" y2="54.61" style="stroke:#008DD2; stroke-width:0.16"/>
+
+<!-- Marking point V -->
+<text x="113.56" y="53.61" style="font-size:1.41pt; font-style:italic; fill:#008DD2" >V</text>
+
+<!-- Changing color 188 136 1 -->
+
+<!-- Drawing segment Cw AvNJ1f -->
+<line x1="159.04" y1="110.00" x2="145.43" y2="54.61" style="stroke:#BC8801; stroke-width:0.16"/>
+
+<!-- Drawing segment Ce AvDE2f -->
+<line x1="160.96" y1="110.00" x2="174.57" y2="54.61" style="stroke:#BC8801; stroke-width:0.16"/>
+
+<!-- Drawing segment AvMa_x_AvNJ1 St1Wf -->
+<line x1="149.63" y1="71.71" x2="149.63" y2="148.29" style="stroke:#BC8801; stroke-width:0.16"/>
+
+<!-- Drawing segment AvMa_x_AvDE2 St1Ef -->
+<line x1="168.26" y1="80.31" x2="168.26" y2="139.69" style="stroke:#BC8801; stroke-width:0.16"/>
+
+<!-- Drawing line StE -->
+<line x1="0.00" y1="80.31" x2="260.00" y2="80.31" style="stroke:#BC8801; stroke-width:0.16"/>
+
+<!-- Drawing segment AvMA_x_AvNJ1 StG2f -->
+<line x1="149.63" y1="71.71" x2="260.00" y2="71.71" style="stroke:#BC8801; stroke-width:0.16"/>
+
+<!-- Drawing line St4_1_2 -->
+<line x1="131.09" y1="150.00" x2="131.09" y2="0.00" style="stroke:#BC8801; stroke-width:0.16"/>
+
+<!-- Changing color 141 153 0 -->
+
+<!-- Drawing segment StGp StGf -->
+<line x1="0.00" y1="73.14" x2="149.98" y2="73.14" style="stroke:#8D9900; stroke-width:0.16"/>
+
+<!-- Drawing segment J AvIN1_x_St4_1_2 -->
+<line x1="66.08" y1="110.00" x2="131.09" y2="86.90" style="stroke:#8D9900; stroke-width:0.16"/>
+
+<!-- Drawing segment AvIN1_x_St4_1_2 AvIN2f -->
+<line x1="131.09" y1="86.90" x2="155.49" y2="95.57" style="stroke:#8D9900; stroke-width:0.16"/>
+
+<!-- Changing color 188 136 1 -->
+
+<!-- Drawing line StD -->
+<line x1="0.00" y1="86.90" x2="260.00" y2="86.90" style="stroke:#BC8801; stroke-width:0.16"/>
+
+<!-- Changing color 0 141 210 -->
+
+<!-- Drawing segment Wn AvNY2f -->
+<line x1="236.71" y1="0.00" x2="66.08" y2="75.06" style="stroke:#008DD2; stroke-width:0.16"/>
+
+<!-- Drawing segment Wn AvPA1f -->
+<line x1="66.08" y1="75.06" x2="0.00" y2="45.99" style="stroke:#008DD2; stroke-width:0.16"/>
+
+<!-- Drawing line St23 -->
+<line x1="19.59" y1="150.00" x2="19.59" y2="0.00" style="stroke:#008DD2; stroke-width:0.16"/>
+
+<!-- Drawing segment Ce AvMDf -->
+<line x1="160.96" y1="110.00" x2="260.00" y2="60.48" style="stroke:#008DD2; stroke-width:0.16"/>
+
+<!-- Marking point S -->
+<text x="194.98" y="127.51" style="font-size:1.41pt; font-style:italic; fill:#008DD2" dy="1.405975">S</text>
+
+<!-- Drawing segment Ce AvPA3f -->
+<line x1="240.96" y1="150.00" x2="160.96" y2="110.00" style="stroke:#008DD2; stroke-width:0.16"/>
+
+<!-- Drawing segment S L -->
+<line x1="193.98" y1="126.51" x2="227.01" y2="110.00" style="stroke:#008DD2; stroke-width:0.16"/>
+
+<!-- Changing color 208 76 21 -->
+
+<!-- Drawing segment Wn AvVTf -->
+<line x1="66.08" y1="75.06" x2="100.70" y2="0.00" style="stroke:#D04C15; stroke-width:0.16"/>
+
+<!-- Drawing line StM -->
+<line x1="0.00" y1="40.52" x2="260.00" y2="40.52" style="stroke:#D04C15; stroke-width:0.16"/>
+
+<!-- Drawing segment Wn AvMA_x_AvCT -->
+<line x1="66.08" y1="75.06" x2="41.53" y2="21.84" style="stroke:#D04C15; stroke-width:0.16"/>
+
+<!-- Drawing segment AvMA_x_AvCT AvVT_x_StP -->
+<line x1="41.53" y1="21.84" x2="90.63" y2="21.84" style="stroke:#D04C15; stroke-width:0.16"/>
+
+<!-- Drawing segment AvPA1_x_StK AvNHf -->
+<line x1="56.15" y1="0.00" x2="19.59" y2="54.61" style="stroke:#D04C15; stroke-width:0.16"/>
+
+<!-- Drawing segment AvCT_x_StM AvRIf -->
+<line x1="137.97" y1="0.00" x2="50.14" y2="40.52" style="stroke:#D04C15; stroke-width:0.16"/>
+
+<!-- Drawing line St13 -->
+<line x1="90.63" y1="150.00" x2="90.63" y2="0.00" style="stroke:#D04C15; stroke-width:0.16"/>
+
+<!-- Drawing line St14 -->
+<line x1="82.01" y1="150.00" x2="82.01" y2="0.00" style="stroke:#D04C15; stroke-width:0.16"/>
+
+<!-- Drawing line St19 -->
+<line x1="41.53" y1="150.00" x2="41.53" y2="0.00" style="stroke:#D04C15; stroke-width:0.16"/>
+
+<!-- Drawing segment AvCT_x_StM St18Af -->
+<line x1="50.14" y1="40.52" x2="50.14" y2="0.00" style="stroke:#D04C15; stroke-width:0.16"/>
+
+<!-- Drawing segment AvCT_x_StK St15Lf -->
+<line x1="56.64" y1="150.00" x2="56.64" y2="54.61" style="stroke:#D04C15; stroke-width:0.16"/>
+
+<!-- Drawing segment AvVT_x_StK St17Lf -->
+<line x1="75.51" y1="150.00" x2="75.51" y2="54.61" style="stroke:#D04C15; stroke-width:0.16"/>
+
+<!-- Drawing segment AvNY2_x_St13 AvPA1_x_St19 -->
+<line x1="90.63" y1="64.26" x2="41.53" y2="64.26" style="stroke:#D04C15; stroke-width:0.16"/>
+
+<!-- Changing color 32 162 153 -->
+
+<!-- Drawing segment AvCT_x_St17U St17Uf -->
+<line x1="59.04" y1="59.81" x2="59.04" y2="0.00" style="stroke:#20A299; stroke-width:0.16"/>
+
+<!-- Filling rectangle left-bottom: AvCT_x_St17U right-top: AvCT_x_StK -->
+<path d="M59.04,59.81 L 56.64,59.81 L 56.64,54.61 L 59.04,54.61 z" fill="#20A299" stroke="none"/>
+
+<!-- Drawing segment AvVT_x_St15U St15Uf -->
+<line x1="73.11" y1="59.81" x2="73.11" y2="0.00" style="stroke:#20A299; stroke-width:0.16"/>
+
+<!-- Filling rectangle left-bottom: AvVT_x_St15U right-top: AvVT_x_StK -->
+<path d="M73.11,59.81 L 75.51,59.81 L 75.51,54.61 L 73.11,54.61 z" fill="#20A299" stroke="none"/>
+
+<!-- Drawing segment StIU_x_AvPA1 StIU_x_AvNY2 -->
+<line x1="31.42" y1="59.81" x2="100.73" y2="59.81" style="stroke:#20A299; stroke-width:0.16"/>
+
+<!-- Drawing line St21 -->
+<line x1="31.42" y1="150.00" x2="31.42" y2="0.00" style="stroke:#20A299; stroke-width:0.16"/>
+
+<!-- Drawing segment StH3_x_AvNY2 StH3_x_AvMA -->
+<line x1="86.26" y1="66.18" x2="137.63" y2="66.18" style="stroke:#20A299; stroke-width:0.16"/>
+
+<!-- Filling rectangle left-bottom: StH3_x_AvNY2 right-top: St13_x_StH2 -->
+<path d="M86.26,66.18 L 90.63,66.18 L 90.63,64.26 L 86.26,64.26 z" fill="#20A299" stroke="none"/>
+
+<!-- Drawing line St3 -->
+<line x1="137.63" y1="150.00" x2="137.63" y2="0.00" style="stroke:#20A299; stroke-width:0.16"/>
+
+<!-- Drawing segment StIL_x_AvNY2 StIL_x_AvMA -->
+<line x1="96.34" y1="61.75" x2="127.82" y2="61.65" style="stroke:#20A299; stroke-width:0.16"/>
+
+<!-- Filling rectangle left-bottom: StIL_x_AvNY2 right-top: StIU_x_AvNY2 -->
+<path d="M96.34,61.75 L 100.73,61.75 L 100.73,59.81 L 96.34,59.81 z" fill="#20A299" stroke="none"/>
+
+<!-- Drawing line St5 -->
+<line x1="127.82" y1="150.00" x2="127.82" y2="0.00" style="stroke:#20A299; stroke-width:0.16"/>
+
+<!-- Drawing line St4 -->
+<line x1="134.37" y1="150.00" x2="134.37" y2="0.00" style="stroke:#20A299; stroke-width:0.16"/>
+
+<!-- Drawing line St11 -->
+<line x1="98.53" y1="150.00" x2="98.53" y2="0.00" style="stroke:#20A299; stroke-width:0.16"/>
+
+<!-- Drawing segment StLU_x_St4 StLU_x_St11 -->
+<line x1="134.37" y1="47.90" x2="98.53" y2="47.90" style="stroke:#20A299; stroke-width:0.16"/>
+
+<!-- Drawing line St9 -->
+<line x1="110.48" y1="150.00" x2="110.48" y2="0.00" style="stroke:#20A299; stroke-width:0.16"/>
+
+<!-- Drawing line St7 -->
+<line x1="114.74" y1="150.00" x2="114.74" y2="0.00" style="stroke:#20A299; stroke-width:0.16"/>
+
+<!-- Filling rectangle left-bottom: St7_x_AvMA right-top: St9_x_AvMA -->
+<path d="M114.74,55.62 L 110.48,55.62 L 110.48,53.65 L 114.74,53.65 z" fill="#20A299" stroke="none"/>
+
+<!-- Drawing segment StL1_x_AvMA StL1fw -->
+<line x1="0.00" y1="48.86" x2="100.09" y2="48.86" style="stroke:#20A299; stroke-width:0.16"/>
+
+<!-- Drawing segment StL1_x_AvNY2 StL1fe -->
+<line x1="125.64" y1="48.86" x2="260.00" y2="48.86" style="stroke:#20A299; stroke-width:0.16"/>
+
+<!-- Drawing segment StH1_x_AvPA1 StH1f -->
+<line x1="0.00" y1="66.66" x2="46.98" y2="66.66" style="stroke:#20A299; stroke-width:0.16"/>
+
+<!-- Filling rectangle left-bottom: AvPA1_x_St19 right-top: StH1_x_AvPA1 -->
+<path d="M41.53,64.26 L 46.98,64.26 L 46.98,66.66 L 41.53,66.66 z" fill="#20A299" stroke="none"/>
+
+<!-- Drawing line St18 -->
+<line x1="46.98" y1="150.00" x2="46.98" y2="0.00" style="stroke:#20A299; stroke-width:0.16"/>
+
+<!-- Changing color 99 123 131 -->
+
+<!-- Printing text at point lab -->
+<text x="237.01" y="110.00" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">Capitol</text>
+
+<!-- Printing text at point lab -->
+<text x="237.01" y="93.49" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">C</text>
+
+<!-- Printing text at point lab -->
+<text x="237.01" y="86.90" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">D</text>
+
+<!-- Printing text at point lab -->
+<text x="237.01" y="80.31" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">E</text>
+
+<!-- Printing text at point lab -->
+<text x="237.01" y="76.98" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">F</text>
+
+<!-- Printing text at point lab -->
+<text x="237.01" y="71.71" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">G</text>
+
+<!-- Printing text at point lab -->
+<text x="237.01" y="66.18" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">H</text>
+
+<!-- Printing text at point lab -->
+<text x="237.01" y="61.32" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">I</text>
+
+<!-- Printing text at point lab -->
+<text x="237.01" y="54.61" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">K</text>
+
+<!-- Printing text at point lab -->
+<text x="237.01" y="48.86" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">L</text>
+
+<!-- Printing text at point lab -->
+<text x="237.01" y="40.52" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">M</text>
+
+<!-- Printing text at point lab -->
+<text x="237.01" y="33.17" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">N</text>
+
+<!-- Printing text at point lab -->
+<text x="237.01" y="21.84" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">P</text>
+
+<!-- Printing text at point lab -->
+<text x="227.01" y="11.84" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">12E</text>
+
+<!-- Printing text at point lab -->
+<text x="193.98" y="11.84" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">5E</text>
+
+<!-- Printing text at point lab -->
+<text x="168.26" y="11.84" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">1E</text>
+
+<!-- Printing text at point lab -->
+<text x="160.00" y="11.84" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">Capitol</text>
+
+<!-- Printing text at point lab -->
+<text x="149.63" y="11.84" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">1</text>
+
+<!-- Printing text at point lab -->
+<text x="137.63" y="11.84" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">3</text>
+
+<!-- Printing text at point lab -->
+<text x="134.37" y="11.84" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">4</text>
+
+<!-- Printing text at point lab -->
+<text x="131.09" y="11.84" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">4h</text>
+
+<!-- Printing text at point lab -->
+<text x="127.82" y="11.84" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">5</text>
+
+<!-- Printing text at point lab -->
+<text x="114.74" y="11.84" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">7</text>
+
+<!-- Printing text at point lab -->
+<text x="112.56" y="11.84" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">8</text>
+
+<!-- Printing text at point lab -->
+<text x="110.48" y="11.84" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">9</text>
+
+<!-- Printing text at point lab -->
+<text x="98.53" y="11.84" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">11</text>
+
+<!-- Printing text at point lab -->
+<text x="90.63" y="11.84" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">13</text>
+
+<!-- Printing text at point lab -->
+<text x="82.01" y="11.84" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">14</text>
+
+<!-- Printing text at point lab -->
+<text x="73.11" y="11.84" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">15</text>
+
+<!-- Printing text at point lab -->
+<text x="66.08" y="11.84" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">16</text>
+
+<!-- Printing text at point lab -->
+<text x="59.04" y="11.84" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">17</text>
+
+<!-- Printing text at point lab -->
+<text x="46.98" y="11.84" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">18</text>
+
+<!-- Printing text at point lab -->
+<text x="41.53" y="11.84" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">19</text>
+
+<!-- Printing text at point lab -->
+<text x="31.42" y="11.84" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">21</text>
+
+<!-- Printing text at point lab -->
+<text x="19.59" y="11.84" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">23</text>
+</svg>
