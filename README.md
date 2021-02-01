@@ -9,7 +9,7 @@ Analysis of Pierre Charles L’Enfant’s first plan for laying out the streets 
 
 Pierre Charles L’Enfant, dotted line map of Washington, D.C., 1791, before Aug. 19th, https://lccn.loc.gov/88694203
 
-![](https://mosher.mine.nu/images/history/dc/lenfant_dc.ptif/full/full/0/default.jpg)
+![](https://mosher.mine.nu/images/history/dc/lenfant_dc.ptif/2000,1000,8400,6000/full/0/default.jpg)
 
 ![](./lenfant_dc.svg)
 
