@@ -265,7 +265,7 @@
 <line x1="114.45" y1="150.00" x2="114.45" y2="0.00" style="stroke:#20A299; stroke-width:0.16"/>
 
 <!-- Drawing line St24 -->
-<line x1="8.37" y1="150.00" x2="8.37" y2="0.00" style="stroke:#20A299; stroke-width:0.16"/>
+<line x1="7.16" y1="150.00" x2="7.16" y2="0.00" style="stroke:#20A299; stroke-width:0.16"/>
 
 <!-- Drawing segment StL1_x_AvMA StL1fw -->
 <line x1="0.00" y1="48.86" x2="92.09" y2="48.86" style="stroke:#20A299; stroke-width:0.16"/>
@@ -423,5 +423,5 @@
 <text x="11.59" y="11.84" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">23</text>
 
 <!-- Printing text at point lab -->
-<text x="8.37" y="11.84" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">24</text>
+<text x="7.16" y="11.84" style="font-size:1.41pt; font-style:italic; fill:#637B83" text-anchor="middle" dy="0.702988">24</text>
 </svg>

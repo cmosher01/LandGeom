@@ -628,7 +628,7 @@ drawline St6
 
 % 24th St (Seems very arbitrarily placed. The distance from
 % 24th St to 23rd St is 3/8 the distance from 21st St to 23rd St.
-expression St24d {1+3/11}
+expression St24d {1+3/8}
 intersection St21_x_StM St21 StM
 intersection St23_x_StM St23 StM
 towards St24p St21_x_StM St23_x_StM St24d
