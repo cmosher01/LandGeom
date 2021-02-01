@@ -3,12 +3,12 @@
 
 % Pierre Charles L’Enfant, dotted line map of Washington, D.C., 1791, before Aug. 19th, https://lccn.loc.gov/88694203 .
 
-dim 260 150
+dim 223 150
 
 % These constants are only used for proportionally adjusting the drawing to fit the display area. They
 % do not otherwise affect the geometry.
 number scal 0.012
-number offX 160
+number offX 152
 number offY 40
 
 
@@ -699,13 +699,15 @@ color 99 123 131
 
 
 % Label E/W (letter) streets
-point tlab 10 0
+point tlab 2 0
 translate Lewp t tlab L
 translate Lewf t tn Lewp
 line Lew Lewp Lewf
 
 intersection lab Lew CapitolEW
-printat lab {Capitol}
+point lcap -15 0
+translate lab t lcap lab
+printat lab {Capitol Av}
 intersection lab Lew StC
 printat lab {C}
 intersection lab Lew StD
@@ -746,7 +748,7 @@ printat lab {5E}
 intersection lab Lns St1E
 printat lab {1E}
 intersection lab Lns CapitolNS
-printat lab {Capitol}
+printat lab {Capitol Av}
 intersection lab Lns St1W
 printat lab {1}
 intersection lab Lns St2

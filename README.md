@@ -1,4 +1,4 @@
-# Surveyor’s Layout Instructions for L’Enfant’s First Grand Plan of Washington, D.C.
+# Geometric Analysis of L’Enfant’s First Grand Plan of Washington, D.C.
 
 Copyright © 2021, Christopher Alan Mosher, Shelton, Connecticut, USA, <cmosher01@gmail.com>.
 
@@ -13,6 +13,6 @@ Pierre Charles L’Enfant, dotted line map of Washington, D.C., 1791, before Aug
 
 ![](./lenfant_dc.svg)
 
-The generated map (immediately above) was generated exclusively from simple
+The schematic map (immediately above) was generated exclusively from simple
 [geometric formulas](./lenfant_dc.gcl),
 in a script for the [GCLC](https://github.com/janicicpredrag/gclc) application.

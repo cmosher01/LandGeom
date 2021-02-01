@@ -4,15 +4,15 @@
 
 <figure>
 	<draw>
-		<dimensions width="260" height="150"></dimensions>
+		<dimensions width="223" height="150"></dimensions>
 	</draw>
 
 	<define>
-		<fixed_number value="160">C_x</fixed_number>
+		<fixed_number value="152">C_x</fixed_number>
 		<fixed_number value="40">C_y</fixed_number>
-		<fixed_number value="66.076">W_x</fixed_number>
+		<fixed_number value="58.076">W_x</fixed_number>
 		<fixed_number value="73.984">W_y</fixed_number>
-		<fixed_number value="52.192">A_x</fixed_number>
+		<fixed_number value="44.192">A_x</fixed_number>
 		<fixed_number value="-394.736">A_y</fixed_number>
 		<fixed_number value="1.92">b</fixed_number>
 		<fixed_number value="-1.92">bneg</fixed_number>
@@ -23,7 +23,7 @@
 		<fixed_point x="0" y="-633.6">ts</fixed_point>
 		<fixed_point x="633.6" y="0">te</fixed_point>
 		<fixed_point x="-633.6" y="0">tw</fixed_point>
-		<fixed_point x="160" y="40">C</fixed_point>
+		<fixed_point x="152" y="40">C</fixed_point>
 	</define>
 
 	<labels>
@@ -31,8 +31,8 @@
 	</labels>
 
 	<define>
-		<fixed_number value="159.04">Cw_x</fixed_number>
-		<fixed_point x="159.04" y="40">Cw</fixed_point>
+		<fixed_number value="151.04">Cw_x</fixed_number>
+		<fixed_point x="151.04" y="40">Cw</fixed_point>
 	</define>
 
 	<labels fontsize="4" color="D23982">
@@ -40,8 +40,8 @@
 	</labels>
 
 	<define>
-		<fixed_number value="160.96">Ce_x</fixed_number>
-		<fixed_point x="160.96" y="40">Ce</fixed_point>
+		<fixed_number value="152.96">Ce_x</fixed_number>
+		<fixed_point x="152.96" y="40">Ce</fixed_point>
 	</define>
 
 	<labels fontsize="4" color="D23982">
@@ -49,7 +49,7 @@
 	</labels>
 
 	<define>
-		<fixed_point x="66.076" y="73.984">W</fixed_point>
+		<fixed_point x="58.076" y="73.984">W</fixed_point>
 	</define>
 
 	<labels fontsize="4" color="D23982">
@@ -58,7 +58,7 @@
 
 	<define>
 		<fixed_number value="74.944">Wn_y</fixed_number>
-		<fixed_point x="66.076" y="74.944">Wn</fixed_point>
+		<fixed_point x="58.076" y="74.944">Wn</fixed_point>
 	</define>
 
 	<labels fontsize="4" color="D23982">
@@ -67,7 +67,7 @@
 
 	<define>
 		<fixed_number value="73.024">Ws_y</fixed_number>
-		<fixed_point x="66.076" y="73.024">Ws</fixed_point>
+		<fixed_point x="58.076" y="73.024">Ws</fixed_point>
 	</define>
 
 	<labels fontsize="4" color="D23982">
@@ -83,7 +83,7 @@
 	</draw>
 
 	<define>
-		<fixed_point x="66.076" y="40">J</fixed_point>
+		<fixed_point x="58.076" y="40">J</fixed_point>
 	</define>
 
 	<labels fontsize="4" color="D23982">
@@ -176,7 +176,7 @@
 	</draw>
 
 	<define>
-		<fixed_point x="52.192" y="-394.736">A</fixed_point>
+		<fixed_point x="44.192" y="-394.736">A</fixed_point>
 	</define>
 
 	<construct>
@@ -201,8 +201,8 @@
 	</construct>
 
 	<define>
-		<fixed_number value="227.008">h</fixed_number>
-		<fixed_point x="227.008" y="40">L</fixed_point>
+		<fixed_number value="219.008">h</fixed_number>
+		<fixed_point x="219.008" y="40">L</fixed_point>
 	</define>
 
 	<labels fontsize="4" color="B<8801">
@@ -835,7 +835,7 @@
 	</construct>
 
 	<define>
-		<fixed_point x="10" y="0">tlab</fixed_point>
+		<fixed_point x="2" y="0">tlab</fixed_point>
 	</define>
 
 	<construct>
@@ -845,8 +845,16 @@
 		<intersection><new_point>lab</new_point><line>Lew</line><line>CapitolEW</line></intersection>
 	</construct>
 
+	<define>
+		<fixed_point x="-15" y="0">lcap</fixed_point>
+	</define>
+
+	<construct>
+		<translate><new_point>lab</new_point><vector><point>t</point><point>lcap</point></vector><point>lab</point></translate>
+	</construct>
+
 	<labels fontsize="4" color="20:299">
-		<text_label direction="0 distance="0""><point>lab</point><text>Capitol</text></text_label>
+		<text_label direction="0 distance="0""><point>lab</point><text>Capitol Av</text></text_label>
 	</labels>
 
 	<construct>
@@ -981,7 +989,7 @@
 	</construct>
 
 	<labels fontsize="4" color="637B83">
-		<text_label direction="0 distance="0""><point>lab</point><text>Capitol</text></text_label>
+		<text_label direction="0 distance="0""><point>lab</point><text>Capitol Av</text></text_label>
 	</labels>
 
 	<construct>
